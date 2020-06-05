@@ -1,0 +1,30 @@
+/* ========================================
+  Mixins
+======================================== */
+@mixin v-spacing($field, $mobile-size, $desktop-size) {
+  #{$field}: get-linear-size($mobile-size, $desktop-size);
+
+  @media (max-width: #{$grid-xlarge}) {
+    #{$field}: $desktop-size;
+  }
+
+  @media (max-width: #{$grid-medium}) {
+    #{$field}: $mobile-size;
+  }
+}
+
+@mixin match-grid-padding($property) {
+  // #{$property}: 90px;
+  
+  // @media screen and (max-width: 87.49875em) {
+  //   #{$property}: 55px;
+  // }
+
+  // @media screen and (max-width: 61.24875em) {
+  //   #{$property}: 50px;
+  // }
+
+  // @media screen and (max-width: 39.99875em) {
+  //   #{$property}: 20px;
+  // }
+}

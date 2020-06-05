@@ -1,0 +1,117 @@
+/*  ==================================
+  Widths and Heights
+=================================== */
+$navbar-height: 125px;
+$navbar-height-shrunk: 90px;
+$navbar-height-small: 72px;
+
+$panel-width: 645px;
+
+$w-text-heading-medium-max: 450px;
+
+$panel-img-credit-bottom: 35px;
+
+/*  ==================================
+  Grid
+=================================== */
+$grid-medium: 640px;
+$grid-large: 1200px;
+$grid-xlarge: 1800px;
+
+$breakpoints: (
+  small: 0,
+  medium: 640px,
+  large: 1200px,
+  xlarge: 1800px
+);
+
+/*  ==================================
+  Specific custom breakpoints
+=================================== */
+$nav-break-1: 1340px;
+$nav-break-2: 1210px;
+$nav-break-3: 1170px;
+
+$footer-break-1: 1560px;
+$footer-break-2: 1160px;
+$footer-break-3: 950px;
+
+$scrolling-images-break-1: 1070px;
+
+$directory-break: 1650px;
+$directory-hide: 1130px;
+
+$press-break-1: 1555px;
+$press-break-2: 1130px;
+$press-break-3: 850px;
+
+$two-up-break: 1300px;
+
+$connections-break-1: 1300px;
+$connections-break-2: 720px;
+
+$event-card-break: 800px;
+
+$terms-break: 1100px;
+
+$ipad-land-break: 1024px;
+
+$interactive-map-break: 960px;
+
+$contact-break: 1100px;
+
+$blog-header-break: 1240px;
+
+$blog-event-details-break: 780px;
+
+/*  ==================================
+  Colors
+=================================== */
+$c-black: #000000;
+$c-white: #FFFFFF;
+$c-dark-grey: #242424;
+$c-smoke-grey: #787878;
+$c-sand-grey: #9E9A94;
+$c-dark-concrete-grey: #464037;
+$c-mid-concrete-grey: #5D564E;
+$c-concrete-grey: #696158;
+$c-light-concrete-grey: #E1DFDD;
+$c-vibrant-brick: #BD472A;
+$c-bankside-red: #E83A3B;
+$c-railway-green: #727337;
+$c-river-blue: #7A99AC;
+
+/*  ==================================
+  Fonts
+=================================== */
+$f-body: 'Montserrat', sans-serif;
+$f-header: 'protoslab-light', sans-serif;
+$f-pre: Monaco, Menlo, Consolas, 'Courier New', monospace;
+
+/*  ==================================
+  z-index
+=================================== */
+$z-ajax-overlay: 140;
+$z-burger-menu: 130;
+$z-fullscreen-overlay: 120;
+$z-map-panel: 110;
+$z-navbar: 100;
+$z-form-msg: 90;
+$z-mobile-share-msg: 90;
+$z-scrolling-map-icon: 20;
+$z-main-body: 10;
+
+/*  ==================================
+  Transitions
+=================================== */
+$t-panel-ms: 750ms;
+$t-default-ms: 200ms;
+$t-standard: $t-default-ms linear;
+$t-cubic-bez: cubic-bezier(0.77, 0, 0.175, 1);
+$t-nav-cubic: 400ms $t-cubic-bez;
+$t-fade-in-on-load: 750ms linear forwards;
+
+/*  ==================================
+  Opacities
+=================================== */
+$o-img-zoom-overlay: 0.05;

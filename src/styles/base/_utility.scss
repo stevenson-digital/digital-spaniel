@@ -1,0 +1,21 @@
+/* ========================================
+  Utility Classes
+======================================== */
+.u-anim-hidden {
+	visibility: hidden;
+
+	@media (max-width: $ipad-land-break) {
+		visibility: visible;
+	}
+}
+
+.u-btn-clear {
+	border: 0;
+	background: transparent;
+	padding: 0;
+
+	&:focus,
+	&:active {
+		outline: none;
+	}
+}
