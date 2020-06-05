@@ -4,4 +4,16 @@
 .container {
   width: 100%;
   padding: 0 50px;
+
+  @media (max-width: #{$grid-large}) {
+    padding: 25px;
+  }
+
+  @media (max-width: #{$grid-medium}) {
+    padding: 15px;
+  }
+}
+
+.row {
+  margin: 0;
 }
