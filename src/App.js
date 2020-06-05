@@ -7,7 +7,7 @@ function App() {
       <div className="container">
         <div className="row">
           <div className="col-xs-12 col-sm-8 col-md-7 col-lg-6">
-            <h1>Tech Test 5874</h1>
+            <h1 className="f-test-font-2">Tech Test 5874</h1>
             <p>Testing Netlify CD</p>
           </div>
           <div className="col-xs-12 col-sm-4 col-md-5 col-lg-6">

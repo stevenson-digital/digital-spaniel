@@ -50,9 +50,14 @@ a {
 // 	letter-spacing: 0;
 // 	line-height: 1.55;
 // 	font-weight: 500;
-// 	@include v-spacing(font-size, 16px, 20px);
+// 	@include responsive-property(font-size, 16px, 20px);
 // }
 
 .f-test-font {
 	color: red;
+}
+
+.f-test-font-2 {
+	color: blue;
+	@include responsive-property(font-size, 36px, 72px);
 }
