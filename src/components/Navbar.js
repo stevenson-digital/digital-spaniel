@@ -2,8 +2,23 @@ import React, { useState } from 'react'
 import { useScrollPosition } from '../hooks/useScrollPosition'
 
 const Navbar = () => {
-	const [isScrolled, setIsScrolled] = useState(false)
+	const [isScrolledStage1, setIsScrolledStage1] = useState(false)
+	const [isScrolledStage2, setIsScrolledStage2] = useState(false)
 	const [isOffScreen, setIsOffScreen] = useState(false)
+
+	useScrollPosition(
+		({ currPos }) => {
+			setIsScrolledStage1(Math.abs(currPos.y) > 0)
+		},
+		[isScrolledStage1]
+	)
+
+	useScrollPosition(
+		({ currPos }) => {
+			setIsScrolledStage2(Math.abs(currPos.y) > 100)
+		},
+		[isScrolledStage2]
+	)
 
 	useScrollPosition(
 		({ prevPos, currPos }) => {
@@ -12,19 +27,13 @@ const Navbar = () => {
 		[isOffScreen]
 	)
 
-	useScrollPosition(
-		({ currPos }) => {
-			setIsScrolled(Math.abs(currPos.y) > 0)
-		},
-		[isScrolled]
-	)
-
 	return (
 		<nav
 			className={
 				'Navbar' +
 				(isOffScreen ? ' Navbar--is-off-screen' : '') +
-				(isScrolled ? ' Navbar--is-scrolled' : '')
+				(isScrolledStage1 ? ' Navbar--is-scrolled-stage-1' : '') +
+				(isScrolledStage2 ? ' Navbar--is-scrolled-stage-2' : '')
 			}
 		>
 			<a className="Navbar__logo" href="/">

@@ -75,11 +75,9 @@
 }
 
 // Modifiers
-.Navbar--is-scrolled {
-  background-color: $c-white;
+.Navbar--is-scrolled-stage-1 {
   height: $h-navbar-scrolled;
   align-items: center;
-  border-bottom: 1px solid $c-grey;
 
   .Navbar__logo {
     margin-top: 0;
@@ -88,10 +86,15 @@
 
   .Navbar__links {
     margin-top: 0;
+  }
+}
 
-    a {
-      color: $c-grey;
-    }
+.Navbar--is-scrolled-stage-2 {
+  background-color: $c-white;
+  border-bottom: 1px solid $c-grey;
+
+  .Navbar__links a {
+    color: $c-grey;
   }
 }
 
