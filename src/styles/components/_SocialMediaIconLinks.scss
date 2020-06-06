@@ -1,0 +1,64 @@
+// Block
+.SocialMediaIconLinks {
+	display: flex;
+
+	.SocialMediaIconLinks__li:last-of-type {
+		margin-right: 0;
+	}
+}
+
+// Elements
+.SocialMediaIconLinks__li {
+	font-size: 0;
+	margin-right: 32px;
+
+	a {
+		font-size: 0;
+		display: block;
+
+		svg {
+			fill: $c-grey-mid-2;
+			transition: fill $t-standard;
+		}
+
+		&:hover {
+			svg {
+				fill: $c-navy;
+			}
+		}
+	}
+}
+
+.SocialMediaIconLinks__icon {
+	height: 32px;
+
+	&.linkedin {
+		height: 34px;
+	}
+}
+
+// Modifiers
+.SocialMediaIconLinks--small {
+	.SocialMediaIconLinks__li {
+		margin-right: 10px;
+	}
+
+	.SocialMediaIconLinks__icon {
+		height: 16px;
+
+		&.linkedin {
+			height: 18px;
+		}
+
+		&.twitter {
+			height: 15px;
+    	margin-top: 1px;
+		}
+	}
+}
+
+.SocialMediaIconLinks--burger {
+	position: absolute;
+	bottom: 20px;
+	left: 40px;
+}

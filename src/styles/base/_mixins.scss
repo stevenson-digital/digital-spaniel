@@ -24,3 +24,13 @@
     #{$property}: 20px;
   }
 }
+
+@mixin fade-out-other-links-on-hover($selector) {
+  &:hover > #{$selector} {
+    color: $c-grey-mid-2;
+  }
+  
+  &:hover > #{$selector}:hover {
+    color: $c-navy;
+  }
+}

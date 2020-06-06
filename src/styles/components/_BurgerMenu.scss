@@ -9,6 +9,7 @@ $_w-burger-width: 400px;
   right: 0;
   background-color: $c-white;
   z-index: $z-burger-menu;
+  padding: 60px 0 0 40px;
   // transform: translate3d(-$_w-burger-width,0,0);
   transition: transform 700ms $t-cubic-bez;
 }
@@ -38,8 +39,6 @@ $_w-burger-width: 400px;
 }
 
 .BurgerMenu__links {
-  margin: 60px 0 0 40px;
-
   &:hover > .BurgerMenu__link a {
     color: $c-grey-mid-2;
   }
