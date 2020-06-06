@@ -2,6 +2,7 @@
   Widths and Heights
 =================================== */
 $h-navbar: 125px;
+$h-navbar-scrolled: 70px;
 
 /*  ==================================
   Grid
@@ -46,6 +47,6 @@ $z-navbar: 10;
 /*  ==================================
   Transitions
 =================================== */
-$t-default-ms: 200ms;
+$t-default-ms: 250ms;
 $t-standard: $t-default-ms linear;
 $t-cubic-bez: cubic-bezier(0.77, 0, 0.175, 1);

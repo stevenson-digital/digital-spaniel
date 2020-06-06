@@ -3,28 +3,36 @@
   position: fixed;
   width: 100%;
   top: 0;
+  padding-left: 170px;
+  padding-right: 210px;
   display: flex;
   justify-content: space-between;
   height: $h-navbar;
   z-index: $z-navbar;
   background-color: transparent;
+  border-bottom: 1px solid transparent;
   transform: translate3d(0, 0, 0);
-  transition: background-color $t-standard, transform 400ms $t-cubic-bez;
-  @include responsive-property(padding-left, 20px, 170px);
-  @include responsive-property(padding-right, 20px, 210px);
+  transition: background-color $t-standard, height $t-standard, border-color $t-standard, transform 400ms $t-cubic-bez;
+
+  @media (max-width: #{$grid-large}) {
+    @include match-grid-padding(padding-left);
+    @include match-grid-padding(padding-right);
+  }
 }
 
 // Elements
 .Navbar__logo {
   width: 200px;
   font-size: 0;
+  transition: width $t-standard;
   @include responsive-property(width, 90px, 200px);
   @include responsive-property(margin-top, 15px, 30px);
 }
 
 .Navbar__links {
   display: flex;
-  @include responsive-property(margin-top, 20px, 70px);
+  transition: margin-top $t-standard;
+  @include responsive-property(margin-top, 25px, 80px);
 
   .Navbar__link:last-of-type {
     margin-right: 0;
@@ -32,11 +40,14 @@
 }
 
 .Navbar__link {
+  height: 18px;
+  font-size: 0;
   @include responsive-property(margin-right, 10px, 65px);
   
   a {
     position: relative;
     color: $c-white;
+    transition: color $t-standard;
 
     &:after {
       content: '';
@@ -65,7 +76,23 @@
 
 // Modifiers
 .Navbar--is-scrolled {
-  background-color: black;
+  background-color: $c-white;
+  height: $h-navbar-scrolled;
+  align-items: center;
+  border-bottom: 1px solid $c-grey;
+
+  .Navbar__logo {
+    margin-top: 0;
+    width: 90px;
+  }
+
+  .Navbar__links {
+    margin-top: 0;
+
+    a {
+      color: $c-grey;
+    }
+  }
 }
 
 .Navbar--is-off-screen {

@@ -5,19 +5,16 @@ const Navbar = () => {
 	const [isScrolled, setIsScrolled] = useState(false)
 	const [isOffScreen, setIsOffScreen] = useState(false)
 
-	const offset = 200
-
 	useScrollPosition(
 		({ prevPos, currPos }) => {
-			setIsOffScreen(currPos.y < prevPos.y && Math.abs(currPos.y) > offset)
+			setIsOffScreen(currPos.y < prevPos.y && Math.abs(currPos.y) > 300)
 		},
 		[isOffScreen]
 	)
 
 	useScrollPosition(
 		({ currPos }) => {
-			console.log(currPos.y)
-			setIsScrolled(Math.abs(currPos.y) >= offset)
+			setIsScrolled(Math.abs(currPos.y) > 0)
 		},
 		[isScrolled]
 	)
