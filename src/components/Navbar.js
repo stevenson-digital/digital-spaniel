@@ -1,19 +1,35 @@
 import React, { useState } from 'react'
+import { useScrollPosition } from '../hooks/useScrollPosition'
 
 const Navbar = () => {
-	const [mobileIsOpen, setMobileIsOpen] = useState(false)
+	const [isScrolled, setIsScrolled] = useState(false)
+	const [isOffScreen, setIsOffScreen] = useState(false)
 
-	const handleToggleMobileNav = (e) => {
-		e.preventDefault()
-		setMobileIsOpen(!mobileIsOpen)
-	}
+	const offset = 200
 
-	const handleCloseMobileNav = () => {
-		setMobileIsOpen(false)
-	}
+	useScrollPosition(
+		({ prevPos, currPos }) => {
+			setIsOffScreen(currPos.y < prevPos.y && Math.abs(currPos.y) > offset)
+		},
+		[isOffScreen]
+	)
+
+	useScrollPosition(
+		({ currPos }) => {
+			console.log(currPos.y)
+			setIsScrolled(Math.abs(currPos.y) >= offset)
+		},
+		[isScrolled]
+	)
 
 	return (
-		<nav className={`Navbar ${mobileIsOpen ? 'Navbar--mobile-is-open' : ''}`}>
+		<nav
+			className={
+				'Navbar' +
+				(isOffScreen ? ' Navbar--is-off-screen' : '') +
+				(isScrolled ? ' Navbar--is-scrolled' : '')
+			}
+		>
 			<a className="Navbar__logo" href="/">
 				<img src="/img/digital-spaniel-logo.png" alt="Digital Spaniel Logo" />
 			</a>

@@ -6,3 +6,4 @@
 - Site is not SSR.
 - No 404 error page.
 - Design: Font styling on 'Brand Strategy' has a letter spacing of 0.57px which equates to 0.00053em which seems redundant.
+- useScrollPosition hook not written by me (https://github.com/n8tb1t/use-scroll-position)
