@@ -32,6 +32,10 @@ const Navbar = () => {
 		[isOffScreen]
 	)
 
+	const handleOpenBurgerMenu = () => {
+		dispatch({ type: 'BURGER_OPEN' })
+	}
+
 	return (
 		<nav
 			className={
@@ -57,7 +61,7 @@ const Navbar = () => {
 			</ul>
 			<button
 				className="Navbar__burger u-btn-clear"
-				onClick={() => dispatch({ type: 'OPEN' })}
+				onClick={handleOpenBurgerMenu}
 			>
 				<span></span>
 				<span></span>

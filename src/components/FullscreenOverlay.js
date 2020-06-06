@@ -1,7 +1,8 @@
-import React, { useState } from 'react'
+import React from 'react'
+import { useSelector } from 'react-redux'
 
 const FullscreenOverlay = () => {
-	const [isOpen, setIsOpen] = useState(false)
+	const isOpen = useSelector((state) => state.fullscreenOverlayIsOpen)
 
 	return (
 		<div

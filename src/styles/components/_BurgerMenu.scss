@@ -12,7 +12,7 @@ $_w-burger-width-mobile: 100%;
   z-index: $z-burger-menu;
   padding: 60px 0 0 40px;
   transform: translate3d($_w-burger-width,0,0);
-  transition: transform 700ms $t-cubic-bez;
+  transition: transform $t-standard;
 
   @media (max-width: $grid-medium) {
     padding: 40px 0 0 20px;
@@ -74,4 +74,5 @@ $_w-burger-width-mobile: 100%;
 // Modifiers
 .BurgerMenu--is-open {
   transform: translate3d(0,0,0);
+  transition: transform 700ms $t-cubic-bez;
 }

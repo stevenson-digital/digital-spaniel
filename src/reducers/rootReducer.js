@@ -1,13 +1,20 @@
 const initialState = {
-	burgerMenuIsOpen: false
+	burgerMenuIsOpen: false,
+	fullscreenOverlayIsOpen: false,
 }
 
 function rootReducer(state = initialState, action) {
 	switch (action.type) {
-		case 'OPEN':
-			return { burgerMenuIsOpen: true }
-		case 'CLOSE':
-			return { burgerMenuIsOpen: false }
+		case 'BURGER_OPEN':
+			return {
+				burgerMenuIsOpen: true,
+				fullscreenOverlayIsOpen: true,
+			}
+		case 'BURGER_CLOSE':
+			return {
+				burgerMenuIsOpen: false,
+				fullscreenOverlayIsOpen: false,
+			}
 		default:
 			return state
 	}
