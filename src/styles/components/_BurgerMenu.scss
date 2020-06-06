@@ -4,14 +4,59 @@ $_w-burger-width: 400px;
 .BurgerMenu {
   position: fixed;
   width: $_w-burger-width;
+  height: 100vh;
   top: 0;
   right: 0;
   background-color: $c-white;
-  transform: translate3d(-$_w-burger-width,0,0);
-  transition: transform 700ms $t-cubic;
+  z-index: $z-burger-menu;
+  // transform: translate3d(-$_w-burger-width,0,0);
+  transition: transform 700ms $t-cubic-bez;
 }
 
 // Elements
+.BurgerMenu__close {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  width: 20px;
+  font-size: 0;
+
+  svg {
+    width: 100%;
+
+    path {
+      fill: $c-navy;
+      transition: fill $t-standard;
+    }
+  }
+
+  &:hover {
+    svg path {
+      fill: $c-grey-mid-2;
+    }
+  }
+}
+
+.BurgerMenu__links {
+  margin: 60px 0 0 40px;
+
+  &:hover > .BurgerMenu__link a {
+    color: $c-grey-mid-2;
+  }
+  
+  &:hover > .BurgerMenu__link a:hover {
+    color: $c-navy;
+  }
+}
+
+.BurgerMenu__link {
+  a {
+    color: $c-navy;
+    display: block;
+    margin-bottom: 2px;
+    transition: color $t-standard;
+  }
+}
 
 // Modifiers
 .BurgerMenu--is-open {

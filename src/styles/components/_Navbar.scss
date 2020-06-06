@@ -19,7 +19,7 @@
     @include match-grid-padding(padding-right);
   }
 
-  @media (max-width: $mq-burger) {
+  @media (max-width: $mq-ipad-landscape) {
     align-items: center;
   }
 }
@@ -32,7 +32,7 @@
   @include responsive-property(width, 90px, 200px);
   @include responsive-property(margin-top, 15px, 30px);
 
-  @media (max-width: #{$mq-burger}) {
+  @media (max-width: #{$mq-ipad-landscape}) {
     margin-top: 0;
   }
 }
@@ -52,7 +52,7 @@
   font-size: 0;
   @include responsive-property(margin-right, 10px, 65px);
 
-  @media (max-width: $mq-burger) {
+  @media (max-width: $mq-ipad-landscape) {
     display: none;
   }
   
@@ -96,7 +96,7 @@
     transition: background-color $t-standard;
   }
 
-  @media (max-width: $mq-burger) {
+  @media (max-width: $mq-ipad-landscape) {
     display: flex;
   }
 }
