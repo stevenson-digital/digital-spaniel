@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { useScrollPosition } from '../hooks/useScrollPosition'
+import { NAV_LINKS } from '../constants/navigation'
 
 const Navbar = () => {
 	const [isScrolledStage1, setIsScrolledStage1] = useState(false)
@@ -15,7 +16,7 @@ const Navbar = () => {
 
 	useScrollPosition(
 		({ currPos }) => {
-			setIsScrolledStage2(Math.abs(currPos.y) > 100)
+			setIsScrolledStage2(Math.abs(currPos.y) > 150)
 		},
 		[isScrolledStage2]
 	)
@@ -40,31 +41,15 @@ const Navbar = () => {
 				<img src="/img/digital-spaniel-logo.png" alt="Digital Spaniel Logo" />
 			</a>
 			<ul className="Navbar__links u-list-clear">
-				<li className="Navbar__link">
-					<a className="f-os-semibold-20-18" href="/">
-						Services
-					</a>
-				</li>
-				<li className="Navbar__link">
-					<a className="f-os-semibold-20-18" href="/">
-						Work
-					</a>
-				</li>
-				<li className="Navbar__link">
-					<a className="f-os-semibold-20-18" href="/">
-						About
-					</a>
-				</li>
-				<li className="Navbar__link">
-					<a className="f-os-semibold-20-18" href="/">
-						Blog
-					</a>
-				</li>
-				<li className="Navbar__link">
-					<a className="f-os-semibold-20-18" href="/">
-						Contact
-					</a>
-				</li>
+				{NAV_LINKS.map((link) => {
+					return (
+						<li className="Navbar__link" key={'nav-li-' + link.linkText}>
+							<a className="f-os-semibold-20-18" href={link.link}>
+								{link.linkText}
+							</a>
+						</li>
+					)
+				})}
 			</ul>
 			<button className="Navbar__burger u-btn-clear">
 				<span></span>

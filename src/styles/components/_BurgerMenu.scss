@@ -1,0 +1,19 @@
+$_w-burger-width: 400px;
+
+// Block
+.BurgerMenu {
+  position: fixed;
+  width: $_w-burger-width;
+  top: 0;
+  right: 0;
+  background-color: $c-white;
+  transform: translate3d(-$_w-burger-width,0,0);
+  transition: transform 700ms $t-cubic;
+}
+
+// Elements
+
+// Modifiers
+.BurgerMenu--is-open {
+  transform: translate3d(0,0,0);
+}
