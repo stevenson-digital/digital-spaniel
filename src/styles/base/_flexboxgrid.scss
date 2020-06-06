@@ -267,11 +267,6 @@
 }
 
 @media only screen and (min-width: #{$grid-medium}) {
-// @media only screen and (min-width: 48em) {
-  // .container {
-  //   width: 49rem;
-  // }
-
   .col-sm,
   .col-sm-1,
   .col-sm-2,
@@ -302,8 +297,8 @@
     -webkit-box-flex: 0;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
-    padding-right: 5px;
-    padding-left: 5px;
+    padding-right: 10px;
+    padding-left: 10px;
   }
 
   .col-sm {
@@ -499,11 +494,6 @@
 }
 
 @media only screen and (min-width: #{$grid-large}) {
-// @media only screen and (min-width: 64em) {
-//   .container {
-//     width: 65rem;
-//   }
-
   .col-md,
   .col-md-1,
   .col-md-2,
@@ -731,11 +721,6 @@
 }
 
 @media only screen and (min-width: #{$grid-xlarge}) {
-// @media only screen and (min-width: 75em) {
-//   .container {
-//     width: 76rem;
-//   }
-
   .col-lg,
   .col-lg-1,
   .col-lg-2,

@@ -1,13 +1,11 @@
 /* ==================================
   Base
 ================================== */
-html {
-	font-smoothing: antialiased;
-	-webkit-font-smoothing: antialiased;
-}
-
 body {
-	@extend .f-test-font;
+	color: $c-grey;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+	@extend .f-os-regular-21-18;
 }
 
 h1,
@@ -16,6 +14,7 @@ h3,
 h4,
 p {
 	margin: 0;
+	font-weight: normal;
 }
 
 a {
@@ -31,33 +30,26 @@ a {
 /* ==================================
   Style Guide Classes
 ================================== */
-// $font-path: "../fonts/";
-
-// @font-face {
-// 	font-family: 'protoslab-regular';
-// 	src: url($font-path + 'protoslabweb-regular.eot');
-// 	src: url($font-path + 'protoslabweb-regular.eot?#iefix') format('embedded-opentype'), url($font-path + 'protoslabweb-regular.woff') format('woff');
-// }
-
-// @font-face {
-// 	font-family: 'protoslab-light';
-// 	src: url($font-path + 'protoslabweb-light.eot');
-// 	src: url($font-path + 'protoslabweb-light.eot?#iefix') format('embedded-opentype'), url($font-path + 'protoslabweb-light.woff') format('woff');
-// }
-
-// .f-mont-20-16-medium {
-// 	font-family: $f-body;
-// 	letter-spacing: 0;
-// 	line-height: 1.55;
-// 	font-weight: 500;
-// 	@include responsive-property(font-size, 16px, 20px);
-// }
-
-.f-test-font {
-	color: red;
+@font-face {
+	font-family: 'ITC Avant Garde Std Md';
+	src: url('../../fonts/ITCAvantGardeStd-Md.eot');
+	src: local('ITC Avant Garde Gothic Std Medium'), local('ITCAvantGardeStd-Md'),
+			url('../../fonts/ITCAvantGardeStd-Md.eot?#iefix') format('embedded-opentype'),
+			url('../../fonts/ITCAvantGardeStd-Md.woff2') format('woff2'),
+			url('../../fonts/ITCAvantGardeStd-Md.woff') format('woff'),
+			url('../../fonts/ITCAvantGardeStd-Md.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
 }
 
-.f-test-font-2 {
-	color: blue;
-	@include responsive-property(font-size, 36px, 72px);
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+.f-os-regular-21-18 {
+	font-family: 'Open Sans', sans-serif;
+	@include responsive-property(font-size, 18px, 21px);
+}
+
+.f-agg-48-36 {
+	font-family: 'ITC Avant Garde Std Md';
+	@include responsive-property(font-size, 36px, 48px);
 }
