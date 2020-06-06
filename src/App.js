@@ -11,7 +11,7 @@ function App() {
 						<p>Testing Netlify CD</p>
 					</div>
 					<div className="col-xs-12 col-sm-4 col-md-5 col-lg-6">
-						<p>Two block grid test</p>
+						<p className="f-os-regular-20-18">Two block grid test</p>
 						<div></div>
 					</div>
 				</div>

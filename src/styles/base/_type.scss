@@ -2,10 +2,10 @@
   Base
 ================================== */
 body {
+	@extend .f-os-regular-21-18;
 	color: $c-grey;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-	@extend .f-os-regular-21-18;
 }
 
 h1,
@@ -28,28 +28,91 @@ a {
 }
 
 /* ==================================
-  Style Guide Classes
+  Style Guide
 ================================== */
 @font-face {
 	font-family: 'ITC Avant Garde Std Md';
 	src: url('../../fonts/ITCAvantGardeStd-Md.eot');
 	src: local('ITC Avant Garde Gothic Std Medium'), local('ITCAvantGardeStd-Md'),
-			url('../../fonts/ITCAvantGardeStd-Md.eot?#iefix') format('embedded-opentype'),
-			url('../../fonts/ITCAvantGardeStd-Md.woff2') format('woff2'),
-			url('../../fonts/ITCAvantGardeStd-Md.woff') format('woff'),
-			url('../../fonts/ITCAvantGardeStd-Md.ttf') format('truetype');
+		url('../../fonts/ITCAvantGardeStd-Md.eot?#iefix') format('embedded-opentype'),
+		url('../../fonts/ITCAvantGardeStd-Md.woff2') format('woff2'),
+		url('../../fonts/ITCAvantGardeStd-Md.woff') format('woff'),
+		url('../../fonts/ITCAvantGardeStd-Md.ttf') format('truetype');
 	font-weight: 500;
 	font-style: normal;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
+// Open Sans
 .f-os-regular-21-18 {
 	font-family: 'Open Sans', sans-serif;
+	line-height: 1.8;
 	@include responsive-property(font-size, 18px, 21px);
 }
 
+.f-os-regular-20-18 {
+	font-family: 'Open Sans', sans-serif;
+	line-height: 1;
+	@include responsive-property(font-size, 18px, 20px);
+}
+
+.f-os-regular-18-16 {
+	font-family: 'Open Sans', sans-serif;
+	line-height: 1.5;
+	@include responsive-property(font-size, 16px, 18px);
+}
+
+.f-os-semibold-30-24 {
+	font-family: 'Open Sans', sans-serif;
+	line-height: 1;
+	font-weight: 600;
+	font-style: italic;
+	@include responsive-property(font-size, 24px, 30px);
+}
+
+.f-os-semibold-21-18 {
+	font-family: 'Open Sans', sans-serif;
+	line-height: 1.5;
+	font-weight: 600;
+	letter-spacing: 0.00053em;
+	@include responsive-property(font-size, 18px, 21px);
+}
+
+.f-os-semibold-20-18 {
+	font-family: 'Open Sans', sans-serif;
+	line-height: 1;
+	font-weight: 600;
+	@include responsive-property(font-size, 18px, 20px);
+}
+
+.f-os-semibold-16 {
+	font-family: 'Open Sans', sans-serif;
+	line-height: 1;
+	font-weight: 600;
+	font-size: 16px;
+}
+
+.f-os-bold-21-18 {
+	@extend .f-os-regular-21-18;
+	font-weight: 700;
+}
+
+// Avant Garde Gothic
 .f-agg-48-36 {
 	font-family: 'ITC Avant Garde Std Md';
+	line-height: 1.1875;
 	@include responsive-property(font-size, 36px, 48px);
+}
+
+.f-agg-24-20 {
+	font-family: 'ITC Avant Garde Std Md';
+	line-height: 1.1875;
+	@include responsive-property(font-size, 20px, 24px);
+}
+
+.f-agg-21-18 {
+	font-family: 'ITC Avant Garde Std Md';
+	line-height: 1;
+	@include responsive-property(font-size, 18px, 21px);
 }
