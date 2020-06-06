@@ -61,4 +61,8 @@
 	position: absolute;
 	bottom: 20px;
 	left: 40px;
+
+	@media (max-width: $grid-medium) {
+    left: 20px;
+  }
 }

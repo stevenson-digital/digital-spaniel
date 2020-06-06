@@ -14,7 +14,7 @@ const BurgerMenu = () => {
 				{NAV_LINKS.map((link) => {
 					return (
 						<li className="BurgerMenu__link" key={'burger-li-' + link.linkText}>
-							<a className="f-agg-48-36" href={link.link}>
+							<a className="f-agg-48-42" href={link.link}>
 								{link.linkText}
 							</a>
 						</li>
