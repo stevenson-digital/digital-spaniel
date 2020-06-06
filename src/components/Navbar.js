@@ -1,11 +1,15 @@
 import React, { useState } from 'react'
 import { useScrollPosition } from '../hooks/useScrollPosition'
 import { NAV_LINKS } from '../constants/navigation'
+import { useDispatch } from 'react-redux'
+
 
 const Navbar = () => {
 	const [isScrolledStage1, setIsScrolledStage1] = useState(false)
 	const [isScrolledStage2, setIsScrolledStage2] = useState(false)
 	const [isOffScreen, setIsOffScreen] = useState(false)
+
+	const dispatch = useDispatch()
 
 	useScrollPosition(
 		({ currPos }) => {
@@ -51,7 +55,10 @@ const Navbar = () => {
 					)
 				})}
 			</ul>
-			<button className="Navbar__burger u-btn-clear">
+			<button
+				className="Navbar__burger u-btn-clear"
+				onClick={() => dispatch({ type: 'OPEN' })}
+			>
 				<span></span>
 				<span></span>
 				<span></span>

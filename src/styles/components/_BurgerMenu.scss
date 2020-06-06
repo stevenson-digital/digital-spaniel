@@ -11,7 +11,7 @@ $_w-burger-width-mobile: 100%;
   background-color: $c-white;
   z-index: $z-burger-menu;
   padding: 60px 0 0 40px;
-  // transform: translate3d(-$_w-burger-width,0,0);
+  transform: translate3d($_w-burger-width,0,0);
   transition: transform 700ms $t-cubic-bez;
 
   @media (max-width: $grid-medium) {
@@ -20,7 +20,7 @@ $_w-burger-width-mobile: 100%;
 
   @media (max-width: 540px) {
     width: $_w-burger-width-mobile;
-    // transform: translate3d(-$_w-burger-width-mobile,0,0);
+    transform: translate3d($_w-burger-width-mobile,0,0);
   }
 }
 

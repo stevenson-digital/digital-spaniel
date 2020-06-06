@@ -1,0 +1,15 @@
+// Block
+.FullscreenOverlay {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 100vh;
+	background-color: rgba($c-navy,0.5);
+	z-index: $z-fullscreen-overlay;
+	display: none;
+}
+
+// Modifiers
+.FullscreenOverlay--is-open {
+	display: block;
+}
