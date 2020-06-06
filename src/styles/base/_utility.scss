@@ -4,7 +4,7 @@
 .u-anim-hidden {
 	visibility: hidden;
 
-	@media (max-width: $ipad-land-break) {
+	@media (max-width: $mq-ipad-landscape) {
 		visibility: visible;
 	}
 }
