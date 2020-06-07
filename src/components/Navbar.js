@@ -9,16 +9,15 @@ const Navbar = () => {
 	const [isOffScreen, setIsOffScreen] = useState(false)
 	const [logoSrc, setLogoSrc] = useState('/img/digital-spaniel-logo.png')
 	const dispatch = useDispatch()
-	const winWidth = window.innerWidth
-	const stageOneOffset = winWidth <= 640 ? 0 : 150
-	const stageTwoOffset = winWidth <= 640 ? 100 : 300
+	const stageOneOffset = window.innerWidth <= 640 ? 0 : 150
+	const stageTwoOffset = window.innerWidth <= 640 ? 100 : 300
 
+	// Change logo on load/resize
 	useEffect(() => {
 		const handleSwapLogo = () => {
 			if (window.scrollY < stageOneOffset) {
-				console.log('setLogo')
 				setLogoSrc(
-					winWidth <= 1024
+					window.innerWidth <= 1024
 						? '/img/digital-spaniel-logo-white.png'
 						: '/img/digital-spaniel-logo.png'
 				)
@@ -30,7 +29,7 @@ const Navbar = () => {
 		window.addEventListener('resize', handleSwapLogo)
 	})
 
-	// Shrink the navbar
+	// Shrink the navbar on scroll
 	useScrollPosition(
 		({ currPos }) => {
 			setIsScrolledStage1(Math.abs(currPos.y) > stageOneOffset)
@@ -38,7 +37,7 @@ const Navbar = () => {
 		[isScrolledStage1]
 	)
 
-	// Add the bar
+	// Add the bar on scroll
 	useScrollPosition(
 		({ currPos }) => {
 			setIsScrolledStage2(Math.abs(currPos.y) > stageTwoOffset)
@@ -46,14 +45,14 @@ const Navbar = () => {
 		[isScrolledStage2]
 	)
 
-	// Set the color of the logo when scrolling
+	// Change logo on scroll
 	useScrollPosition(
 		({ currPos }) => {
 			if (Math.abs(currPos.y) >= stageTwoOffset) {
 				setLogoSrc('/img/digital-spaniel-logo.png')
 			} else if (Math.abs(currPos.y) < stageTwoOffset) {
 				setLogoSrc(
-					winWidth <= 1024
+					window.innerWidth <= 1024
 						? '/img/digital-spaniel-logo-white.png'
 						: '/img/digital-spaniel-logo.png'
 				)
@@ -78,7 +77,7 @@ const Navbar = () => {
 
 	const handleSwapLogo = () => {
 		// setLogoSrc(
-		// 	winWidth <= 1024
+		// 	window.innerWidth <= 1024
 		// 		? '/img/digital-spaniel-logo-white.png'
 		// 		: '/img/digital-spaniel-logo.png'
 		// )
