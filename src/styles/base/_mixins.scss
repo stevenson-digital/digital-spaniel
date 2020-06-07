@@ -17,7 +17,7 @@
   #{$property}: 70px;
 
   @media (max-width: #{$grid-large}) {
-    #{$property}: 45px;
+    #{$property}: 35px;
   }
 
   @media (max-width: #{$grid-medium}) {

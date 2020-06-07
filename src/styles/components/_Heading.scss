@@ -1,0 +1,10 @@
+// Block
+.Heading {
+	span {
+		display: block;
+
+		&:first-of-type {
+			color: $c-navy;
+		}
+	}
+}

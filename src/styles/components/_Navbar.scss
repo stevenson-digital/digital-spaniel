@@ -91,6 +91,7 @@
   flex-direction: column;
   justify-content: space-between;
   height: 16px;
+  transition: height 75ms linear;
   display: none;
 
   span {
@@ -98,6 +99,10 @@
     height: 2px;
     background-color: $c-white;
     transition: background-color $t-standard;
+  }
+
+  &:hover {
+    height: 20px;
   }
 
   @media (max-width: $mq-ipad-landscape) {
@@ -122,7 +127,7 @@
 
 .Navbar--is-scrolled-stage-2 {
   background-color: $c-white;
-  border-bottom: 1px solid $c-grey;
+  border-bottom: 1px solid $c-grey-mid-3;
 
   .Navbar__links a {
     color: $c-grey;
