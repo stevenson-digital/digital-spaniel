@@ -25,3 +25,12 @@
 		}
 	}
 }
+
+// Modifiers
+.Link--white {
+	color: $c-white;
+
+	&:after {
+		background-color: $c-white;
+	}
+}

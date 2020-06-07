@@ -75,14 +75,6 @@ const Navbar = () => {
 		dispatch({ type: 'BURGER_OPEN' })
 	}
 
-	const handleSwapLogo = () => {
-		// setLogoSrc(
-		// 	window.innerWidth <= 1024
-		// 		? '/img/digital-spaniel-logo-white.png'
-		// 		: '/img/digital-spaniel-logo.png'
-		// )
-	}
-
 	return (
 		<nav
 			className={
