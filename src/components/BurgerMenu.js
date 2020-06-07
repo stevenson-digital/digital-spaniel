@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { NAV_LINKS } from '../constants/navigation'
 import SocialMediaIconLinks from './SocialMediaIconLinks'
 import { useSelector, useDispatch } from 'react-redux'
