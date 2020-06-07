@@ -3,6 +3,7 @@
 ================================== */
 .container {
   width: 100%;
+  max-width: 1450px;
   padding: 0 50px;
 
   @media (max-width: #{$grid-large}) {
