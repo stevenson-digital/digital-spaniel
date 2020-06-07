@@ -1,0 +1,22 @@
+// Block
+.CaseStudySliderPanel {
+	height: 0%; // Stop flex from forcing height 100
+	background-color: $c-navy;
+	color: $c-white;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+	text-align: left;
+	padding: 10% 60px 10% 30px;
+	transform: translate3d(-1px,0,0);
+}
+
+// Elements
+.CaseStudySliderPanel__heading {
+	margin-bottom: 15px;
+}
+
+.CaseStudySliderPanel__desc {
+	margin-bottom: 30px;
+}

@@ -1,17 +1,20 @@
 import React from 'react'
-import { SLIDES } from '../constants/caseStudySlider'
-import Link from './Link'
+import { SLIDES } from '../../constants/caseStudySlider'
+import CaseStudySliderPanel from './CaseStudySliderPanel'
 import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 
 const CaseStudySlider = () => {
 	const settings = {
-		dots: true,
+		dots: false,
+		arrows: true,
 		infinite: true,
 		speed: 500,
 		slidesToShow: 1,
 		slidesToScroll: 1,
+		// centerMode: true,
+		// centerPadding: '200px',
 	}
 
 	return (
@@ -23,11 +26,13 @@ const CaseStudySlider = () => {
 							className="CaseStudySlider__slide"
 							key={'case-study-slide-' + index}
 						>
-							<img src={slide.img} alt="Test" />
-							<div className="CaseStudySlider__panel">
-								<h3>{slide.heading}</h3>
-								<p>{slide.desc}</p>
-								<Link linkText="Read more" modifiers="Link--white" />
+							<div className="CaseStudySlider__slide-inner">
+								<img src={slide.img} alt="Test" />
+								<CaseStudySliderPanel
+									heading={slide.heading}
+									desc={slide.desc}
+									link={slide.link}
+								/>
 							</div>
 						</div>
 					)

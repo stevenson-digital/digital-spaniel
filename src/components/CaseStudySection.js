@@ -1,5 +1,5 @@
 import React from 'react'
-import CaseStudySlider from './CaseStudySlider'
+import CaseStudySlider from './CaseStudySlider/CaseStudySlider'
 
 const CaseStudySection = () => {
 	return (

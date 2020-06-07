@@ -7,10 +7,10 @@ $h-navbar-scrolled: 70px;
 /*  ==================================
   Grid
 =================================== */
+$grid-max-width: 1450px;
 $grid-medium: 640px;
 $grid-large: 1200px;
 $grid-xlarge: 1600px;
-
 $breakpoints: (
   small: 0,
   medium: $grid-medium,

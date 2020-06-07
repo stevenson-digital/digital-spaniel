@@ -1,0 +1,55 @@
+// Block
+.CaseStudySlider {
+	overflow: hidden;
+	// @include match-grid-padding(padding-left);
+	// @include match-grid-padding(padding-right);
+
+	.slick-slider {
+		max-width: 1380px;
+		margin: 0 auto;
+		overflow: visible;
+	}
+
+	.slick-list {
+		width: 100%;
+		// margin: 0 -27px;
+		overflow: visible;
+	}
+
+	.slick-slide {
+		font-size: 0;
+		width: 100%;
+		// margin: 0 27px;
+	}
+
+	.slick-prev,
+	.slick-next {
+		z-index: 1;
+		background-color: black;
+	}
+}
+
+// Elements
+.CaseStudySlider__slide {
+	padding: 0 30px;
+	// NOT ACTIVE WIDTH AUTO FOR EFFECT (no show panel)
+	@media (max-width: $grid-max-width) {
+		width: 75%;
+	}
+}
+
+.CaseStudySlider__slide-inner {
+	display: flex;
+	align-items: center;
+	position: relative;
+
+	img {
+		width: 75%;
+		max-width: 870px;
+		border-radius: 10px;
+		z-index: 1;
+	}
+}
+// FOR RESPONISVE HAVE TEXT
+// OVER TOP OF IMAGE LIKE
+// IN THE MASONRY SECTION
