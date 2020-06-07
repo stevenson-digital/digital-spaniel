@@ -5,28 +5,28 @@ const SocialMediaIconLinks = (props) => {
 	const { isSmall, isInBurger } = props
 	const containerRef = useRef()
 
-	useEffect(() => {
-		if (isInBurger) handleAddMobileAddressBarPadding()
-	})
+	// useEffect(() => {
+	// 	if (isInBurger) handleAddMobileAddressBarPadding()
+	// })
 
-	const getCssAsInt = ($el, property) =>
-		Math.round(
-			parseInt(window.getComputedStyle($el)[property].replace('px', ''))
-		)
+	// const getCssAsInt = ($el, property) =>
+	// 	Math.round(
+	// 		parseInt(window.getComputedStyle($el)[property].replace('px', ''))
+	// 	)
 
-	const handleAddMobileAddressBarPadding = () => {
-		const $el = containerRef.current
-		const property = 'bottom'
+	// const handleAddMobileAddressBarPadding = () => {
+	// 	const $el = containerRef.current
+	// 	const property = 'bottom'
 
-		// Clear inline style first (for resize)
-		$el.style[property] = null
+	// 	// Clear inline style first (for resize)
+	// 	$el.style[property] = null
 
-		// Set new inline style
-		const currentValue = getCssAsInt($el, property)
-		const difference = getCssAsInt(document.querySelector('.BurgerMenu'), 'height') - window.innerHeight
+	// 	// Set new inline style
+	// 	const currentValue = getCssAsInt($el, property)
+	// 	const difference = getCssAsInt(document.querySelector('.BurgerMenu'), 'height') - window.innerHeight
 
-		$el.style[property] = currentValue + difference
-	}
+	// 	$el.style[property] = currentValue + difference
+	// }
 
 	return (
 		<ul

@@ -20,8 +20,11 @@
   }
 
   @media (max-width: $mq-ipad-landscape) {
-    height: $h-navbar-scrolled;
     align-items: center;
+  }
+
+  @media (max-width: #{$grid-medium}) {
+    height: $h-navbar-scrolled;
   }
 }
 
