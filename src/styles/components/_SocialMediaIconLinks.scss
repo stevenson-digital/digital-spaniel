@@ -59,10 +59,11 @@
 
 .SocialMediaIconLinks--burger {
 	position: absolute;
-	bottom: 20px;
+	bottom: 30px;
 	left: 40px;
 
-	@media (max-width: $grid-medium) {
-    left: 20px;
+	@media (max-width: $mq-iphone-5) {
+		left: 20px;
+		bottom: 20px;
   }
 }

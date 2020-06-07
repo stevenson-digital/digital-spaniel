@@ -15,7 +15,7 @@ $_t-burger-cubic: 700ms $t-cubic-bez;
   transform: translate3d($_w-burger-width,0,0);
   transition: transform $t-standard;
 
-  @media (max-width: $grid-medium) {
+  @media (max-width: $mq-iphone-5) {
     padding: 40px 0 0 20px;
   }
 
@@ -28,13 +28,14 @@ $_t-burger-cubic: 700ms $t-cubic-bez;
 // Elements
 .BurgerMenu__close {
   position: absolute;
-  top: 20px;
+  top: 30px;
   right: 40px;
   width: 20px;
   font-size: 0;
 
-  @media (max-width: $grid-medium) {
+  @media (max-width: $mq-iphone-5) {
     right: 20px;
+    top: 20px;
   }
 
   svg {
@@ -79,6 +80,10 @@ $_t-burger-cubic: 700ms $t-cubic-bez;
     display: block;
     margin-bottom: 2px;
     transition: color $t-standard;
+
+    @media (max-width: $mq-iphone-5) {
+      font-size: 42px;
+    }
   }
 }
 
