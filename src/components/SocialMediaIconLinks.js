@@ -16,7 +16,7 @@ const SocialMediaIconLinks = (props) => {
 
 	const handleAddMobileAddressBarPadding = () => {
 		const $el = containerRef.current
-		const property = 'paddingBottom'
+		const property = 'bottom'
 
 		// Clear inline style first (for resize)
 		$el.style[property] = null
