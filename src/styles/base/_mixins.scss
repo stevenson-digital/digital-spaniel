@@ -38,3 +38,8 @@
     color: $c-navy;
   }
 }
+
+@mixin slider-img-size() {
+  width: 75%;
+  max-width: 870px;
+}

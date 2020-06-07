@@ -1,6 +1,7 @@
 // Block
 .CaseStudySection {
 	text-align: center;
+	@include responsive-property(margin-bottom, 60px, 125px);
 }
 
 // Elements

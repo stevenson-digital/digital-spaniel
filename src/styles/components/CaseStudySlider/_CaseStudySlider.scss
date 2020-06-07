@@ -1,38 +1,46 @@
 // Block
 .CaseStudySlider {
+	position: relative;
 	overflow: hidden;
-	// @include match-grid-padding(padding-left);
-	// @include match-grid-padding(padding-right);
 
 	.slick-slider {
-		max-width: 1380px;
+		max-width: $w-case-studies-slider;
 		margin: 0 auto;
 		overflow: visible;
 	}
 
 	.slick-list {
 		width: 100%;
-		// margin: 0 -27px;
 		overflow: visible;
 	}
 
 	.slick-slide {
 		font-size: 0;
 		width: 100%;
-		// margin: 0 27px;
+
+		// &.slick-current PREVIOUS SIBLING {
+		// 	.CaseStudySlider__slide-inner {
+		// 		justify-content: flex-end;
+		// 	}
+		// }
 	}
 
 	.slick-prev,
 	.slick-next {
 		z-index: 1;
 		background-color: black;
+
+		&:hover,
+		&:focus {
+			background-color: black;
+		}
 	}
 }
 
 // Elements
 .CaseStudySlider__slide {
-	padding: 0 30px;
-	// NOT ACTIVE WIDTH AUTO FOR EFFECT (no show panel)
+	padding: 0 35px;
+	
 	@media (max-width: $grid-max-width) {
 		width: 75%;
 	}
@@ -44,12 +52,7 @@
 	position: relative;
 
 	img {
-		width: 75%;
-		max-width: 870px;
+		@include slider-img-size();
 		border-radius: 10px;
-		z-index: 1;
 	}
 }
-// FOR RESPONISVE HAVE TEXT
-// OVER TOP OF IMAGE LIKE
-// IN THE MASONRY SECTION

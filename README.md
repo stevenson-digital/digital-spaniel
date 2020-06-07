@@ -10,3 +10,5 @@
 - BurgerMenu toggles based on Redux state (using hooks).
 - FullscreenOverlay would be extended if a full site so that it stores which component is on top (ie BurgerMenu or Modal). In this way, you can click on it to close whichever component is overlaid. Currently hardcoded to always close BurgerMenu.
 - Site is hosted on Netlify.
+- Slick slider is giving console error. Didn't have time to find an alternative slider package.
+- I had to use a class based component for the slick slider in order to use their API methods for changing slide. Couldn't get it to work in a functional component with hooks; kept getting 'slider is undefined'.
