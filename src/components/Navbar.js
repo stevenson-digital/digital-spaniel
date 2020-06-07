@@ -3,13 +3,13 @@ import { useScrollPosition } from '../hooks/useScrollPosition'
 import { NAV_LINKS } from '../constants/navigation'
 import { useDispatch } from 'react-redux'
 
-
 const Navbar = () => {
 	const [isScrolledStage1, setIsScrolledStage1] = useState(false)
 	const [isScrolledStage2, setIsScrolledStage2] = useState(false)
 	const [isOffScreen, setIsOffScreen] = useState(false)
-
 	const dispatch = useDispatch()
+	const stageOneOffset = window.innerWidth <= 640 ? 0 : 150
+	const stageTwoOffset = window.innerWidth <= 640 ? 100 : 300
 
 	useScrollPosition(
 		({ currPos }) => {
@@ -20,14 +20,14 @@ const Navbar = () => {
 
 	useScrollPosition(
 		({ currPos }) => {
-			setIsScrolledStage2(Math.abs(currPos.y) > 150)
+			setIsScrolledStage2(Math.abs(currPos.y) > stageOneOffset)
 		},
 		[isScrolledStage2]
 	)
 
 	useScrollPosition(
 		({ prevPos, currPos }) => {
-			setIsOffScreen(currPos.y < prevPos.y && Math.abs(currPos.y) > 300)
+			setIsOffScreen(currPos.y < prevPos.y && Math.abs(currPos.y) > stageTwoOffset)
 		},
 		[isOffScreen]
 	)
