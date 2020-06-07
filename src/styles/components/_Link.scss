@@ -1,0 +1,27 @@
+// Block
+.Link {
+	position: relative;
+	display: table;
+	color: $c-navy;
+	transition: color $t-standard;
+	@include responsive-property(padding-bottom, 6px, 10px);
+
+	&:after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 2px;
+		background-color: $c-pink;
+		transition: background-color $t-standard;
+	}
+
+	&:hover {
+		color: $c-grey-mid;
+
+		&:after {
+			background-color: $c-grey-mid;
+		}
+	}
+}

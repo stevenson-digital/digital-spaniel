@@ -22,3 +22,9 @@
 	height: 100%;
 	object-fit: cover;
 }
+
+.Header__capabilities {
+	text-transform: uppercase;
+	color: $c-pink;
+	@include responsive-property(margin-bottom, 20px, 55px);
+}
