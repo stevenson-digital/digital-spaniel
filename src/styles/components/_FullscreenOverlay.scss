@@ -6,10 +6,14 @@
 	height: 100vh;
 	background-color: rgba($c-navy,0.5);
 	z-index: $z-fullscreen-overlay;
-	display: none;
+	opacity: 0;
+	visibility: hidden;
+	transition: visibility 0s linear $t-default-ms, opacity $t-standard 0s;
 }
 
 // Modifiers
 .FullscreenOverlay--is-open {
-	display: block;
+	opacity: 1;
+	visibility: visible;
+	transition: visibility 0s linear 0s, opacity $t-standard 0s;
 }
