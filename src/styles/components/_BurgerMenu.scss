@@ -1,5 +1,6 @@
 $_w-burger-width: 400px;
 $_w-burger-width-mobile: 100%;
+$_t-burger-cubic: 700ms $t-cubic-bez;
 
 // Block
 .BurgerMenu {
@@ -60,9 +61,19 @@ $_w-burger-width-mobile: 100%;
   &:hover > .BurgerMenu__link a:hover {
     color: $c-navy;
   }
+
+  @for $i from 0 through 5 {
+    .BurgerMenu__link:nth-child(#{$i}) {
+      transition-delay: $i * 25ms;
+    }
+  }
 }
 
 .BurgerMenu__link {
+  transform: translate3d(100px,0,0);
+  opacity: 0;
+  transition: transform $_t-burger-cubic, opacity $_t-burger-cubic;
+
   a {
     color: $c-navy;
     display: block;
@@ -74,5 +85,10 @@ $_w-burger-width-mobile: 100%;
 // Modifiers
 .BurgerMenu--is-open {
   transform: translate3d(0,0,0);
-  transition: transform 700ms $t-cubic-bez;
+  transition: transform $_t-burger-cubic;
+
+  .BurgerMenu__link {
+    transform: translate3d(0,0,0);
+    opacity: 1;
+  }
 }
