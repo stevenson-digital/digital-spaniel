@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import { NAV_LINKS } from '../constants/navigation'
 import SocialMediaIconLinks from './SocialMediaIconLinks'
 import { useSelector, useDispatch } from 'react-redux'
@@ -6,9 +6,31 @@ import { useSelector, useDispatch } from 'react-redux'
 const BurgerMenu = () => {
 	const dispatch = useDispatch()
 	const isOpen = useSelector((state) => state.burgerMenuIsOpen)
+	const containerRef = useRef()
+
+	useEffect(() => {
+		handleAddMobileAddressBarPadding()
+	})
+
+	const getCssAsInt = ($el, property) =>
+		Math.round(
+			parseInt(window.getComputedStyle($el)[property].replace('px', ''))
+		)
+
+	const handleAddMobileAddressBarPadding = () => {
+		const $el = containerRef.current
+		const property = 'paddingBottom'
+		const currentValue = getCssAsInt($el, property)
+		const difference = getCssAsInt($el, 'height') - window.innerHeight
+
+		$el.style[property] = currentValue + difference
+	}
 
 	return (
-		<div className={'BurgerMenu' + (isOpen ? ' BurgerMenu--is-open' : '')}>
+		<div
+			ref={containerRef}
+			className={'BurgerMenu' + (isOpen ? ' BurgerMenu--is-open' : '')}
+		>
 			<button
 				className="BurgerMenu__close u-btn-clear"
 				onClick={() => dispatch({ type: 'BURGER_CLOSE' })}
