@@ -106,10 +106,10 @@ a {
 	font-size: 48px;
 }
 
-.f-agg-48-36 {
+.f-agg-48-30 {
 	font-family: 'ITC Avant Garde Std Md';
 	line-height: 1.1875;
-	@include responsive-property(font-size, 36px, 48px);
+	@include responsive-property(font-size, 30px, 48px);
 }
 
 .f-agg-24-20 {

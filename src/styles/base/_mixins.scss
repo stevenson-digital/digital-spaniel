@@ -16,6 +16,10 @@
 @mixin match-grid-padding($property) {
   #{$property}: 70px;
 
+  @media (max-width: #{$grid-xlarge}) {
+    #{$property}: 60px;
+  }
+
   @media (max-width: #{$grid-large}) {
     #{$property}: 35px;
   }

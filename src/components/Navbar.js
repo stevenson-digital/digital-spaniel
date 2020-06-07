@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useScrollPosition } from '../hooks/useScrollPosition'
 import { NAV_LINKS } from '../constants/navigation'
 import { useDispatch } from 'react-redux'
@@ -7,24 +7,64 @@ const Navbar = () => {
 	const [isScrolledStage1, setIsScrolledStage1] = useState(false)
 	const [isScrolledStage2, setIsScrolledStage2] = useState(false)
 	const [isOffScreen, setIsOffScreen] = useState(false)
+	const [logoSrc, setLogoSrc] = useState('/img/digital-spaniel-logo.png')
 	const dispatch = useDispatch()
-	const stageOneOffset = window.innerWidth <= 640 ? 0 : 150
-	const stageTwoOffset = window.innerWidth <= 640 ? 100 : 300
+	const winWidth = window.innerWidth
+	const stageOneOffset = winWidth <= 640 ? 0 : 150
+	const stageTwoOffset = winWidth <= 640 ? 100 : 300
 
+	useEffect(() => {
+		const handleSwapLogo = () => {
+			if (window.scrollY < stageOneOffset) {
+				console.log('setLogo')
+				setLogoSrc(
+					winWidth <= 1024
+						? '/img/digital-spaniel-logo-white.png'
+						: '/img/digital-spaniel-logo.png'
+				)
+			}
+		}
+
+		handleSwapLogo()
+
+		window.addEventListener('resize', handleSwapLogo)
+	})
+
+	// Shrink the navbar
 	useScrollPosition(
 		({ currPos }) => {
-			setIsScrolledStage1(Math.abs(currPos.y) > 0)
+			setIsScrolledStage1(Math.abs(currPos.y) > stageOneOffset)
 		},
 		[isScrolledStage1]
 	)
 
+	// Add the bar
 	useScrollPosition(
 		({ currPos }) => {
-			setIsScrolledStage2(Math.abs(currPos.y) > stageOneOffset)
+			setIsScrolledStage2(Math.abs(currPos.y) > stageTwoOffset)
 		},
 		[isScrolledStage2]
 	)
 
+	// Set the color of the logo when scrolling
+	useScrollPosition(
+		({ currPos }) => {
+			if (Math.abs(currPos.y) >= stageTwoOffset) {
+				setLogoSrc('/img/digital-spaniel-logo.png')
+			} else if (Math.abs(currPos.y) < stageTwoOffset) {
+				setLogoSrc(
+					winWidth <= 1024
+						? '/img/digital-spaniel-logo-white.png'
+						: '/img/digital-spaniel-logo.png'
+				)
+			} else {
+				setLogoSrc('/img/digital-spaniel-logo.png')
+			}
+		},
+		[logoSrc]
+	)
+
+	// Push the bar off screen or bring it back in
 	useScrollPosition(
 		({ prevPos, currPos }) => {
 			setIsOffScreen(currPos.y < prevPos.y && Math.abs(currPos.y) > stageTwoOffset)
@@ -34,6 +74,14 @@ const Navbar = () => {
 
 	const handleOpenBurgerMenu = () => {
 		dispatch({ type: 'BURGER_OPEN' })
+	}
+
+	const handleSwapLogo = () => {
+		// setLogoSrc(
+		// 	winWidth <= 1024
+		// 		? '/img/digital-spaniel-logo-white.png'
+		// 		: '/img/digital-spaniel-logo.png'
+		// )
 	}
 
 	return (
@@ -46,7 +94,7 @@ const Navbar = () => {
 			}
 		>
 			<a className="Navbar__logo" href="/">
-				<img src="/img/digital-spaniel-logo.png" alt="Digital Spaniel Logo" />
+				<img src={logoSrc} alt="Digital Spaniel Logo" />
 			</a>
 			<ul className="Navbar__links u-list-clear">
 				{NAV_LINKS.map((link) => {

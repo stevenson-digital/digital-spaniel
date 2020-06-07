@@ -1,8 +1,13 @@
+// Block
+.HeadingTextLink {
+	max-width: 420px;
+}
+
 // Elements
 .HeadingTextLink__heading {
-	margin-bottom: 10px;
+	@include responsive-property(margin-bottom, 10px, 50px);
 }
 
 .HeadingTextLink__text {
-	margin-bottom: 10px;
+	@include responsive-property(margin-bottom, 20px, 60px);
 }

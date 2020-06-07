@@ -12,7 +12,7 @@ const HeadingTextLink = (props) => {
 				<Heading type={headingType} line1={headingLine1} line2={headingLine2} />
 			</div>
 			<p className="HeadingTextLink__text">{text}</p>
-			<Link />
+			<Link link={link} linkText={linkText} />
 		</div>
 	)
 }

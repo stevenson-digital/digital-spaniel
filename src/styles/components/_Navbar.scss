@@ -14,10 +14,14 @@
   transform: translate3d(0, 0, 0);
   transition: background-color $t-standard, height $t-standard, border-color $t-standard, transform 400ms $t-cubic-bez;
 
-  @media (max-width: #{$grid-large}) {
+  @media (max-width: 1800px) {
     @include match-grid-padding(padding-left);
     @include match-grid-padding(padding-right);
   }
+
+  @media (max-width: $mq-header-stage-1) {
+		height: 90px;
+	}
 
   @media (max-width: $mq-ipad-landscape) {
     align-items: center;
@@ -36,6 +40,10 @@
   @include responsive-property(width, 90px, 200px);
   @include responsive-property(margin-top, 15px, 30px);
 
+  @media (max-width: $mq-header-stage-1) {
+		@include responsive-property(width, 90px, 130px);
+	}
+
   @media (max-width: #{$mq-ipad-landscape}) {
     margin-top: 0;
   }
@@ -46,6 +54,10 @@
   transition: margin-top $t-standard;
   @include responsive-property(margin-top, 25px, 80px);
 
+  @media (max-width: $mq-header-stage-1) {
+		margin-top: 55px;
+	}
+
   .Navbar__link:last-of-type {
     margin-right: 0;
   }
@@ -54,7 +66,11 @@
 .Navbar__link {
   height: 18px;
   font-size: 0;
-  @include responsive-property(margin-right, 10px, 65px);
+  @include responsive-property(margin-right, 0px, 65px);
+
+  @media (max-width: 1300px) {
+    margin-right: 40px;
+  }
 
   @media (max-width: $mq-ipad-landscape) {
     display: none;

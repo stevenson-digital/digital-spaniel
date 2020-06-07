@@ -7,14 +7,14 @@ const Heading = (props) => {
 	const renderHeading = () => {
 		if (type === 'h1') {
 			return (
-				<h1 className="f-agg-48-36">
+				<h1 className="f-agg-48-30">
 					<span>{line1}</span>
 					<span>{line2}</span>
 				</h1>
 			)
 		} else {
 			return (
-				<h2 className="f-agg-48-36">
+				<h2 className="f-agg-48-30">
 					<span>{line1}</span>
 					<span>{line2}</span>
 				</h2>
