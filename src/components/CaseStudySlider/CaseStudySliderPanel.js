@@ -25,7 +25,7 @@ const CaseStudySliderPanel = (props) => {
 			<div className="CaseStudySliderPanel__offset" />
 			<div className="CaseStudySliderPanel__inner">
 				<h3 className="CaseStudySliderPanel__heading f-agg-24-20">{heading}</h3>
-				<p className="CaseStudySliderPanel__desc f-os-regular-18-16">{desc}</p>
+				<p className="CaseStudySliderPanel__desc f-os-regular-18-14">{desc}</p>
 				<Link link={link} linkText="Read more" modifiers="Link--white" />
 			</div>
 			<div className="CaseStudySliderPanel__buttons">

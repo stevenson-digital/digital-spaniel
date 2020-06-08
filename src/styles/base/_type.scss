@@ -57,10 +57,14 @@ a {
 	@include responsive-property(font-size, 18px, 20px);
 }
 
-.f-os-regular-18-16 {
+.f-os-regular-18-14 {
 	font-family: 'Open Sans', sans-serif;
 	line-height: 1.5;
 	@include responsive-property(font-size, 16px, 18px);
+
+	@media (max-width: $mq-phone-smallest) {
+		font-size: 14px;
+	}
 }
 
 .f-os-semibold-30-24 {

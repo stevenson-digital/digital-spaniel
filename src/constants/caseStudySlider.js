@@ -7,8 +7,8 @@ export const SLIDES = [
 	},
 	{
 		img: '/img/dashboard01@2x.png',
-		heading: 'Project 2 title here',
-		desc: 'Short project description goes here To explain what the project is all about.',
+		heading: 'Tech Test 5874',
+		desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.',
 		link: '/',
 	},
 	{
@@ -19,8 +19,8 @@ export const SLIDES = [
 	},
 	{
 		img: '/img/dashboard01@2x.png',
-		heading: 'Project 4 title here',
-		desc: 'Short project description goes here To explain what the project is all about.',
+		heading: 'Frontend Web Developer',
+		desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.',
 		link: '/',
 	},
 ]

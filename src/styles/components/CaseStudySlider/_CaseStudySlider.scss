@@ -3,6 +3,11 @@
 	position: relative;
 	overflow: hidden;
 
+	@media (max-width: $grid-medium) {
+		@include match-grid-padding(padding-left);
+		@include match-grid-padding(padding-right);
+	}
+
 	&:before,
 	&:after {
 		// content: '';
@@ -34,6 +39,14 @@
 		@media (max-width: $mq-case-study-slider-1) {
 			width: $w-case-studies-slider-large;
 		}
+
+		@media (max-width: $mq-ipad-landscape) {
+			width: 85%;
+		}
+
+		@media (max-width: $grid-medium) {
+			width: 100%;
+		}
 	}
 
 	.slick-list {
@@ -64,6 +77,11 @@
 	
 	@media (max-width: $grid-max-width) {
 		width: 75%;
+	}
+
+	@media (max-width: $mq-ipad-landscape) {
+		width: 100%;
+		padding: 0;
 	}
 }
 
