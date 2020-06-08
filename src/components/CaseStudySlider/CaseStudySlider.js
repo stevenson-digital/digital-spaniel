@@ -35,7 +35,7 @@ export default class CaseStudySlider extends Component {
 		direction === 'next' ? this.next() : this.previous()
 
 		// Change text panel
-		const delay = direction === 'next' ? 500 : 300
+		const delay = direction === 'next' ? 400 : 300
 		setTimeout(() => {
 			this.setState({
 				currentHeading: SLIDES[this.state.currentIndex].heading,
