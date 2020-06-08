@@ -21,4 +21,22 @@
 	width: 180px;
 	height: 3px;
 	background-color: $c-pink;
+	transform: translate3d(0,0,0);
+	transition: transform $t-standard-curve;
+
+	&.position-0 {
+		transform: translate3d(0,0,0);	
+	}
+
+	&.position-1 {
+		transform: translate3d(180px,0,0);
+	}
+
+	&.position-2 {
+		transform: translate3d(360px,0,0);
+	}
+
+	&.position-3 {
+		transform: translate3d(540px,0,0);
+	}
 }
