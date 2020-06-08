@@ -15,8 +15,8 @@ const Link = (props) => {
 }
 
 Link.propTypes = {
-	link: PropTypes.string,
-	linkText: PropTypes.string,
+	link: PropTypes.string.isRequired,
+	linkText: PropTypes.string.isRequired,
 	modifiers: PropTypes.string,
 }
 

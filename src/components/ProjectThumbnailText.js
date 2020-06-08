@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import Link from './Link'
 
 const ProjectThumbnailText = (props) => {
@@ -11,6 +12,13 @@ const ProjectThumbnailText = (props) => {
 			<Link link={link} linkText={linkText} modifiers="Link--white" />
 		</div>
 	)
+}
+
+ProjectThumbnailText.propTypes = {
+	heading: PropTypes.string.isRequired,
+	desc: PropTypes.string.isRequired,
+	link: PropTypes.string.isRequired,
+	linkText: PropTypes.string.isRequired,
 }
 
 export default ProjectThumbnailText

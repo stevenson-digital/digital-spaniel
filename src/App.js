@@ -3,6 +3,7 @@ import './App.scss'
 import Navbar from './components/Navigation/Navbar'
 import BurgerMenu from './components/Navigation/BurgerMenu'
 import Header from './components/Header'
+import Capabilities from './components/Capabilities'
 import RecentProjects from './components/RecentProjects/RecentProjects'
 import CaseStudySection from './components/CaseStudySection'
 import FullscreenOverlay from './components/FullscreenOverlay'
@@ -13,11 +14,9 @@ function App() {
 			<Navbar />
 			<BurgerMenu />
 			<Header />
+			<Capabilities />
 			<RecentProjects />
 			<CaseStudySection />
-			<div style={{height: '100vh', background: 'red'}} />
-			<div style={{height: '100vh', background: 'green'}} />
-			<div style={{height: '100vh', background: 'blue'}} />
 			<FullscreenOverlay />
 		</div>
 	)

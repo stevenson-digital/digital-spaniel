@@ -19,11 +19,11 @@ const HeadingTextLink = (props) => {
 
 Heading.propTypes = {
 	headingType: PropTypes.string,
-	headingLine1: PropTypes.string,
-	headingLine2: PropTypes.string,
-	text: PropTypes.string,
-	link: PropTypes.string,
-	linkText: PropTypes.string,
+	headingLine1: PropTypes.string.isRequired,
+	headingLine2: PropTypes.string.isRequired,
+	text: PropTypes.string.isRequired,
+	link: PropTypes.string.isRequired,
+	linkText: PropTypes.string.isRequired,
 }
 
 Heading.defaultProps = {

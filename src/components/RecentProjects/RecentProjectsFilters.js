@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import PropTypes from 'prop-types'
 import { PROJECT_FILTERS } from '../../constants/projects'
 
 const RecentProjectsFilters = (props) => {
@@ -41,6 +42,10 @@ const RecentProjectsFilters = (props) => {
 			})}
 		</div>
 	)
+}
+
+RecentProjectsFilters.propTypes = {
+	filterCallback: PropTypes.func.isRequired,
 }
 
 export default RecentProjectsFilters

@@ -27,8 +27,8 @@ const Heading = (props) => {
 
 Heading.propTypes = {
 	type: PropTypes.string,
-	line1: PropTypes.string,
-	line2: PropTypes.string,
+	line1: PropTypes.string.isRequired,
+	line2: PropTypes.string.isRequired,
 }
 
 Heading.defaultProps = {

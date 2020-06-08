@@ -50,10 +50,10 @@ const CaseStudySliderPanel = (props) => {
 }
 
 CaseStudySliderPanel.propTypes = {
-	heading: PropTypes.string,
-	desc: PropTypes.string,
-	link: PropTypes.string,
-	changeSlide: PropTypes.func,
+	heading: PropTypes.string.isRequired,
+	desc: PropTypes.string.isRequired,
+	link: PropTypes.string.isRequired,
+	changeSlide: PropTypes.func.isRequired,
 }
 
 export default CaseStudySliderPanel
