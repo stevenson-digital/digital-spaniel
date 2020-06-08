@@ -64,3 +64,8 @@ $t-default-ms: 250ms;
 $t-standard: $t-default-ms linear;
 $t-cubic-bez: cubic-bezier(0.77, 0, 0.175, 1);
 $t-standard-curve: 700ms $t-cubic-bez;
+
+/*  ==================================
+  Spacing
+=================================== */
+$mb-common: 110px;

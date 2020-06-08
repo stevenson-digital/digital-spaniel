@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
-import { useScrollPosition } from '../hooks/useScrollPosition'
-import { NAV_LINKS } from '../constants/navigation'
+import { useScrollPosition } from '../../hooks/useScrollPosition'
+import { NAV_LINKS } from '../../constants/navigation'
 import { useDispatch } from 'react-redux'
 
 const Navbar = () => {
