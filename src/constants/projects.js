@@ -60,4 +60,18 @@ export const PROJECTS = [
 		link: '/',
 		type: ['web-design'],
 	},
+	{
+		img: '/img/makerek@2x.png',
+		title: '#07 Project Seven',
+		desc: 'A local paper with big ideas needed A sharp new brand to inspire readers.',
+		link: '/',
+		type: ['branding', 'web-design'],
+	},
+	{
+		img: '/img/whellies01@2x.png',
+		title: '#08 Project Eight',
+		desc: 'A local paper with big ideas needed A sharp new brand to inspire readers.',
+		link: '/',
+		type: ['web-design'],
+	},
 ]

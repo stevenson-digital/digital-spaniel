@@ -3,12 +3,19 @@ import Heading from '../Heading'
 import RecentProjectsFilters from './RecentProjectsFilters'
 import RecentProjectsSlider from './RecentProjectsSlider'
 import { PROJECTS } from '../../constants/projects'
+import chunk from 'lodash/chunk'
+
+function filterProjects(projects, filter) {
+	// const chunkedProjects = projects.filter((type) => filters.includes(area))
+	return projects
+	// return projects.filter(({ bodyAreas }) => inFilters(bodyAreas, filters))
+}
 
 const RecentProjects = () => {
-	const [slides, setSlides] = useState(PROJECTS)
+	const [slides, setSlides] = useState(chunk(filterProjects(PROJECTS, 'all'), 5))
 
 	const handleFilterProjects = (filter) => {
-		console.log('filter by: ' + filter)
+		setSlides(chunk(filterProjects(PROJECTS, filter), 5))
 	}
 
 	return (
