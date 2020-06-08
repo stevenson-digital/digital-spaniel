@@ -5,6 +5,7 @@ $h-navbar: 125px;
 $h-navbar-scrolled: 70px;
 
 $w-case-studies-slider: 1380px;
+$w-case-studies-slider-large: 75%;
 
 /*  ==================================
   Grid
@@ -27,6 +28,10 @@ $mq-ipad-landscape: 1024px;
 $mq-iphone-5: 320px;
 
 $mq-header-stage-1: 1450px;
+
+$mq-case-study-slider-1: 1700px;
+$mq-case-study-slider-2: 1400px;
+$mq-case-study-slider-3: 1300px;
 
 /*  ==================================
   Colors
@@ -57,3 +62,4 @@ $z-navbar: 10;
 $t-default-ms: 250ms;
 $t-standard: $t-default-ms linear;
 $t-cubic-bez: cubic-bezier(0.77, 0, 0.175, 1);
+$t-standard-curve: 700ms $t-cubic-bez;

@@ -14,6 +14,7 @@ export default class CaseStudySlider extends Component {
 			currentHeading: SLIDES[0].heading,
 			currentDesc: SLIDES[0].desc,
 			currentLink: SLIDES[0].link,
+			isFade: false,
 		}
 
 		this.next = this.next.bind(this)
@@ -48,6 +49,24 @@ export default class CaseStudySlider extends Component {
 		this.setState({ currentIndex: next })
 	}
 
+	handleSetIsFade() {
+		this.setState({ isFade: window.innerWidth <= 1300 ? true : false })
+	}
+
+	componentDidMount() {
+		this.handleSetIsFade()
+
+		window.addEventListener('resize', () => {
+			this.handleSetIsFade()
+		})
+	}
+
+	componentDidDestroy() {
+		window.removeEventListener('resize', () => {
+			this.handleSetIsFade()
+		})
+	}
+
 	render() {
 		const settings = {
 			dots: false,
@@ -57,6 +76,7 @@ export default class CaseStudySlider extends Component {
 			slidesToScroll: 1,
 			cssEase: 'cubic-bezier(0.77, 0, 0.175, 1)',
 			speed: 700,
+			fade: this.state.isFade,
 			beforeChange: (current, next) => this.handleUpdateCurrentIndex(current, next),
 		}
 

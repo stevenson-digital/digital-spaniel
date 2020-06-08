@@ -5,16 +5,19 @@
 
 	&:before,
 	&:after {
-		content: '';
+		// content: '';
 		position: absolute;
 		left: 0;
 		top: 0;
 		width: 300px;
 		height: 100%;
 		z-index: 1;
-		background: -moz-linear-gradient(left,  rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
-		background: -webkit-linear-gradient(left,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
-		background: linear-gradient(to right,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+		background: -moz-linear-gradient(left,  rgb(241, 23, 23) 0%, rgba(255,255,255,0) 100%);
+		background: -webkit-linear-gradient(left,  rgb(241, 23, 23) 0%,rgba(255,255,255,0) 100%);
+		background: linear-gradient(to right,  rgb(241, 23, 23) 0%,rgba(255,255,255,0) 100%);
+		// background: -moz-linear-gradient(left,  rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+		// background: -webkit-linear-gradient(left,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+		// background: linear-gradient(to right,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
 	}
 
 	&:after {
@@ -27,6 +30,10 @@
 		max-width: $w-case-studies-slider;
 		margin: 0 auto;
 		overflow: visible;
+
+		@media (max-width: $mq-case-study-slider-1) {
+			width: $w-case-studies-slider-large;
+		}
 	}
 
 	.slick-list {
@@ -37,12 +44,6 @@
 	.slick-slide {
 		font-size: 0;
 		width: 100%;
-
-		// &.slick-current PREVIOUS SIBLING {
-		// 	.CaseStudySlider__slide-inner {
-		// 		justify-content: flex-end;
-		// 	}
-		// }
 	}
 
 	.slick-prev,

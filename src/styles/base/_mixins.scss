@@ -42,4 +42,17 @@
 @mixin slider-img-size() {
   width: 75%;
   max-width: 870px;
+
+  @media (max-width: $mq-case-study-slider-1) {
+		width: 65%;
+  }
+  
+  @media (max-width: $mq-case-study-slider-2) {
+		width: 60%;
+	}
+
+  @media (max-width: $mq-case-study-slider-3) {
+    width: 100%;
+    max-width: 1000px;
+	}
 }

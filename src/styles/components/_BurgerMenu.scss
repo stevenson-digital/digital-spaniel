@@ -1,6 +1,6 @@
 $_w-burger-width: 400px;
 $_w-burger-width-mobile: 100%;
-$_t-burger-cubic: 700ms $t-cubic-bez;
+$_t-burger-cubic: $t-standard-curve;
 
 // Block
 .BurgerMenu {
