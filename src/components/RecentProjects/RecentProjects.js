@@ -6,16 +6,21 @@ import { PROJECTS } from '../../constants/projects'
 import chunk from 'lodash/chunk'
 
 function filterProjects(projects, filter) {
-	// const chunkedProjects = projects.filter((type) => filters.includes(area))
-	return projects
-	// return projects.filter(({ bodyAreas }) => inFilters(bodyAreas, filters))
+	if (filter === 'all') {
+		return chunk(projects, 5)
+	} else {
+		const matches = projects.filter((project) => project.type.includes(filter))
+		return chunk(matches, 5)
+	}
 }
 
 const RecentProjects = () => {
-	const [slides, setSlides] = useState(chunk(filterProjects(PROJECTS, 'all'), 5))
+	const [filter, setFilter] = useState('all')
+	const [slides, setSlides] = useState(filterProjects(PROJECTS, filter))
 
 	const handleFilterProjects = (filter) => {
-		setSlides(chunk(filterProjects(PROJECTS, filter), 5))
+		setFilter(filter)
+		setSlides(filterProjects(PROJECTS, filter))
 	}
 
 	return (

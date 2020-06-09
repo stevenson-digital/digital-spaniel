@@ -14,6 +14,13 @@ export default class RecentProjectsSlider extends Component {
 		}
 	}
 
+	componentDidUpdate(prevProps) {
+		// Re-render when props change
+		if (prevProps.slides !== this.props.slides) {
+			this.setState({ slides: this.props.slides })
+		}
+	}
+
 	render() {
 		const settings = {
 			dots: true,
