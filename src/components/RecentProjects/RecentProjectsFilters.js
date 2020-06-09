@@ -6,8 +6,10 @@ const RecentProjectsFilters = (props) => {
 	const { filterCallback } = props
 	const [positionModifier, setPositionModifier] = useState('position-0')
 	const [activeFilter, setActiveFilter] = useState(0)
+	const [selectedOption, setSelectedOption] = useState(null)
 
 	const handleFilter = (filter, index) => {
+		console.log(filter)
 		// Set active filter
 		setActiveFilter(index)
 
@@ -16,6 +18,12 @@ const RecentProjectsFilters = (props) => {
 
 		// Filter projects
 		filterCallback(filter)
+	}
+
+	const handleSelectChange = (e) => {
+		const filter = e.target.value
+		setSelectedOption(filter)
+		handleFilter(filter, 0)
 	}
 
 	return (
@@ -40,6 +48,19 @@ const RecentProjectsFilters = (props) => {
 					</button>
 				)
 			})}
+			<select
+				value={selectedOption}
+				className="RecentProjectsFilters__dropdown"
+				onChange={handleSelectChange}
+			>
+				{PROJECT_FILTERS.map((filter, index) => {
+					return (
+						<option key={`filter-btn-${index}`} value={filter.slug}>
+							{filter.name}
+						</option>
+					)
+				})}
+			</select>
 		</div>
 	)
 }

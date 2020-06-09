@@ -13,6 +13,10 @@
 	&.active {
 		font-weight: 700;
 	}
+
+	@media (max-width: $mq-recent-projects) {
+		display: none;
+	}
 }
 
 .RecentProjectsFilters__indicator {
@@ -24,6 +28,10 @@
 	background-color: $c-pink;
 	transform: translate3d(0,0,0);
 	transition: transform $t-standard-curve;
+
+	@media (max-width: $mq-recent-projects) {
+		display: none;
+	}
 
 	&.position-0 {
 		transform: translate3d(0,0,0);	
@@ -39,5 +47,13 @@
 
 	&.position-3 {
 		transform: translate3d(540px,0,0);
+	}
+}
+
+.RecentProjectsFilters__dropdown {
+	display: none;
+
+	@media (max-width: $mq-recent-projects) {
+		display: block;
 	}
 }
