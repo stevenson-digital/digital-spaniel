@@ -93,6 +93,6 @@
 
 	img {
 		@include slider-img-size();
-		border-radius: 10px;
+		@include standard-border-radius();
 	}
 }

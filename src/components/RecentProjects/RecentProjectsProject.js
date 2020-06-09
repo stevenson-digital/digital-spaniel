@@ -7,14 +7,20 @@ const RecentProjectsProject = (props) => {
 
 	return (
 		<div className="RecentProjectsProject">
-			<img src={project.img} alt={`Thumbnail for ${project.title}`} />
-			<h3>{project.title}</h3>
-			<ProjectThumbnailText
-				heading={project.title}
-				desc={project.desc}
-				link={project.link}
-				linkText="Full project"
+			<img
+				className="RecentProjectsProject__img"
+				src={project.img}
+				alt={`Thumbnail for ${project.title}`}
 			/>
+			<div className="RecentProjectsProject__gradient" />
+			<div className="RecentProjectsProject__text">
+				<ProjectThumbnailText
+					heading={project.title}
+					desc={project.desc}
+					link={project.link}
+					linkText="Full project"
+				/>
+			</div>
 		</div>
 	)
 }
