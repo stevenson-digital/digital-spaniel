@@ -79,5 +79,10 @@
 			}
 		}
 	}
-	// LOOP OVER EACH PROJECT AND ADD TRANSITION DELAY FOR FADE OUT/IN
+	
+	@for $i from 0 through 5 {
+    .RecentProjectsProject:nth-child(#{$i}) {
+      transition-delay: $i * 40ms;
+    }
+  }
 }

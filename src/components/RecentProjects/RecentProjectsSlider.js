@@ -13,6 +13,7 @@ export default class RecentProjectsSlider extends Component {
 
 		this.state = {
 			slides: this.props.slides,
+			slideIsAnimating: false,
 		}
 
 		this.next = this.next.bind(this)
@@ -31,11 +32,15 @@ export default class RecentProjectsSlider extends Component {
 
 	handleChangeSlide(direction) {
 		// Animate the projects out
+		this.setState({ slideIsAnimating: true })
 
-		// Change slick slide
-		direction === 'next' ? this.next() : this.previous()
+		setTimeout(() => {
+			// Change slick slide
+			direction === 'next' ? this.next() : this.previous()
 
-		// Animate the projects back in
+			// Animate the projects back in
+			this.setState({ slideIsAnimating: false })
+		}, 400)
 	}
 
 	componentDidUpdate(prevProps) {
@@ -74,7 +79,10 @@ export default class RecentProjectsSlider extends Component {
 					{this.state.slides.map((projects, index) => {
 						return (
 							<div
-								className="RecentProjectsSlider__slide"
+								className={
+									'RecentProjectsSlider__slide' +
+									(this.state.slideIsAnimating ? ' is-animating' : '')
+								}
 								key={'project-slide-' + index}
 							>
 								<RecentProjectsSlide projects={projects} />
