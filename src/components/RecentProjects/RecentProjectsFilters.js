@@ -50,7 +50,7 @@ const RecentProjectsFilters = (props) => {
 			})}
 			<select
 				value={selectedOption}
-				className="RecentProjectsFilters__dropdown"
+				className="RecentProjectsFilters__dropdown f-os-semibold-20-18"
 				onChange={handleSelectChange}
 			>
 				{PROJECT_FILTERS.map((filter, index) => {

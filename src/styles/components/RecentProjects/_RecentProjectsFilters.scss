@@ -51,6 +51,8 @@
 }
 
 .RecentProjectsFilters__dropdown {
+	border: 0;
+	border-bottom: 2px solid $c-pink;
 	display: none;
 
 	@media (max-width: $mq-recent-projects) {
