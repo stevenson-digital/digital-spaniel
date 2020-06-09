@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import Slider from 'react-slick'
 import PropTypes from 'prop-types'
 import RecentProjectsSlide from './RecentProjectsSlide'
+import Link from '../Link'
+import SliderBtn from '../SliderBtn'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 
@@ -12,6 +14,28 @@ export default class RecentProjectsSlider extends Component {
 		this.state = {
 			slides: this.props.slides,
 		}
+
+		this.next = this.next.bind(this)
+		this.previous = this.previous.bind(this)
+		this.handleChangeSlide = this.handleChangeSlide.bind(this)
+		this.renderButtons = this.renderButtons.bind(this)
+	}
+
+	next() {
+		this.slider.slickNext()
+	}
+
+	previous() {
+		this.slider.slickPrev()
+	}
+
+	handleChangeSlide(direction) {
+		// Animate the projects out
+
+		// Change slick slide
+		direction === 'next' ? this.next() : this.previous()
+
+		// Animate the projects back in
 	}
 
 	componentDidUpdate(prevProps) {
@@ -21,11 +45,24 @@ export default class RecentProjectsSlider extends Component {
 		}
 	}
 
+	renderButtons() {
+		if (this.state.slides.length > 1) {
+			return (
+				<div className="RecentProjectsSlider__buttons">
+					<SliderBtn callback={() => this.handleChangeSlide('prev')} />
+					<SliderBtn
+						callback={() => this.handleChangeSlide('next')}
+						arrowDirection="right"
+					/>
+				</div>
+			)
+		}
+	}
+
 	render() {
 		const settings = {
-			dots: true,
 			infinite: true,
-			speed: 500,
+			speed: 0,
 			slidesToShow: 1,
 			slidesToScroll: 1,
 			adaptiveHeight: true,
@@ -33,7 +70,7 @@ export default class RecentProjectsSlider extends Component {
 
 		return (
 			<div className="RecentProjectsSlider">
-				<Slider {...settings}>
+				<Slider ref={c => (this.slider = c)} {...settings}>
 					{this.state.slides.map((projects, index) => {
 						return (
 							<div
@@ -45,8 +82,9 @@ export default class RecentProjectsSlider extends Component {
 						)
 					})}
 				</Slider>
-				<div className="RecentProjectsSlider__buttons">
-					{/* Hide buttons if only 1 slide */}
+				<div className="RecentProjectsSlider__actions">
+					<Link linkText="View all" />
+					{this.renderButtons()}
 				</div>
 			</div>
 		)

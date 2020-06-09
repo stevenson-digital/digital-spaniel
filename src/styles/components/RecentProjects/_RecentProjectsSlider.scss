@@ -1,0 +1,38 @@
+// Elements
+.RecentProjectsSlider__actions {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+}
+
+.RecentProjectsSlider__buttons {
+	display: flex;
+	align-items: flex-start;
+
+	.SliderBtn {
+		&:first-of-type {
+			background-color: $c-grey-mid-2;
+
+			&:hover {
+				background-color: $c-grey-light;
+			}
+		}
+	
+		&:last-of-type {
+			background-color: $c-navy;
+
+			svg path {
+				fill: $c-white;
+			}
+
+			&:hover {
+				background-color: $c-grey-light;
+
+				svg path {
+					fill: $c-navy;
+				}
+			}
+		}
+	}
+}

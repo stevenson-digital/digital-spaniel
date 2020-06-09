@@ -1,0 +1,57 @@
+// Block
+.SliderBtn {
+	width: 64px;
+	height: 64px;
+	background-color: $c-white;
+	transition: background-color $t-standard;
+
+	@media (max-width: $mq-case-study-slider-2) {
+		width: 50px;
+		height: 50px;
+	}
+
+	@media (max-width: $grid-medium) {
+		width: 40px;
+		height: 40px;
+	}
+
+	svg {
+		height: 42px;
+		margin-top: 16px;
+
+		@media (max-width: $mq-case-study-slider-2) {
+			height: 28px;
+			margin-top: 14px;
+		}
+
+		@media (max-width: $grid-medium) {
+			margin-top: 10px;
+		}
+
+		path {
+			fill: $c-navy;
+			transition: fill $t-standard;
+		}
+	}
+
+	&:hover,
+	&:active {
+		background-color: $c-grey-light;
+	}
+}
+
+// Modifiers
+.SliderBtn--left {
+	svg {
+		transform: rotate(180deg);
+		margin-top: 0;
+
+		@media (max-width: $mq-case-study-slider-2) {
+			margin-top: 4px;
+		}
+
+		@media (max-width: $grid-medium) {
+			margin-top: 2px;
+		}
+	}
+}
