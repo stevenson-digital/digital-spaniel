@@ -9,8 +9,8 @@ const Testimonial = (props) => {
 			<p className="Testimonial__quote f-os-semibold-italic-26-20">{quote}</p>
 			<div className="Testimonial__bottom">
 				<img className="Testimonial__img" src={img} alt={`${name}`} />
-				<p className="f-os-bold-21-18">{name}</p>
-				<p className="f-os-regular-21-18">{jobTitle}</p>
+				<p className="Testimonial__name f-os-bold-21-18">{name}</p>
+				<p className="Testimonial__job-title f-os-regular-21-18">{jobTitle}</p>
 			</div>
 		</div>
 	)

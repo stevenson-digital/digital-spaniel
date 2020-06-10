@@ -12,6 +12,15 @@
 	@include responsive-property(padding-right, 20px, 115px);
 	@include responsive-property(padding-bottom, 20px, 65px);
 	@include responsive-property(padding-left, 20px, 115px);
+
+	@media (max-width: $mq-testimonial-1) {
+		padding: 20px;
+	}
+
+	@media (max-width: $mq-testimonial-3) {
+		margin-bottom: 20px;
+		width: 100%;
+	}
 }
 
 // Elements
@@ -19,6 +28,21 @@
 	position: relative;
 	color: $c-grey;
 	margin-bottom: 40px;
+
+	@media (max-width: $mq-testimonial-1) {
+		padding: 0 30px;
+		font-size: 16px;
+		margin-bottom: 20px;
+	}
+
+	@media (max-width: $mq-testimonial-2) {
+		padding: 0;
+	}
+
+	@media (max-width: $mq-testimonial-3) {
+		max-width: 250px;
+    margin: 0 auto 20px;
+	}
 
 	&:before,
 	&:after {
@@ -30,17 +54,37 @@
 		line-height: 163px;
 		color: $c-grey-mid-3;
 		z-index: 0;
+
+		@media (max-width: $mq-testimonial-1) {
+			font-size: 80px;
+			height: 23px;
+			line-height: 85px;
+		}
+
+		@media (max-width: $mq-testimonial-2) {
+			display: none;
+		}
 	}
 
 	&:before {
 		top: -25px;
-    left: -85px;
+		left: -85px;
+		
+		@media (max-width: $mq-testimonial-1) {
+			top: 0px;
+    	left: -20px;
+		}
 	}
 
 	&:after {
 		bottom: -20px;
 		right: -85px;
 		transform: rotate(180deg);
+
+		@media (max-width: $mq-testimonial-1) {
+			bottom: 20px;
+    	right: -20px;
+		}
 	}
 }
 
@@ -49,4 +93,22 @@
 	height: 96px;
 	border-radius: 50%;
 	border: 2px solid $c-white;
+
+	@media (max-width: $mq-testimonial-1) {
+		width: 60px;
+		height: 60px;
+	}
+}
+
+.Testimonial__name {
+	@media (max-width: $mq-testimonial-1) {
+		margin-bottom: -5px;
+		font-size: 16px;
+	}
+}
+
+.Testimonial__job-title {
+	@media (max-width: $mq-testimonial-1) {
+		font-size: 16px;
+	}
 }

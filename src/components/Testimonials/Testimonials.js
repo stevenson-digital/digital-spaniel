@@ -10,24 +10,24 @@ const Testimonials = () => {
 
 	useEffect(() => {
 		// Get quotes from API
-		// let i = 0
-		// let promises = []
-		// let quotes = []
+		let i = 0
+		let promises = []
+		let quotes = []
 
-		// for (i = 0; i < testimonials.length; i++) {
-		// 	promises.push(
-		// 		axios
-		// 			.get('https://cors-anywhere.herokuapp.com/https://api.kanye.rest')
-		// 			.then((response) => {
-		// 				const quote = response.data.quote
-		// 				const n = 50
-		// 				const truncatedQuote = (quote.length > n) ? quote.substr(0, n-1) + ' ...' : quote
-		// 				quotes.push(truncatedQuote)
-		// 			})
-		// 	)
-		// }
+		for (i = 0; i < testimonials.length; i++) {
+			promises.push(
+				axios
+					.get('https://cors-anywhere.herokuapp.com/https://api.kanye.rest')
+					.then((response) => {
+						const quote = response.data.quote
+						const n = 50
+						const truncatedQuote = (quote.length > n) ? quote.substr(0, n-1) + ' ...' : quote
+						quotes.push(truncatedQuote)
+					})
+			)
+		}
 
-		// Promise.all(promises).then(() => setQuotes(quotes))
+		Promise.all(promises).then(() => setQuotes(quotes))
 	}, [])
 
 	return (
