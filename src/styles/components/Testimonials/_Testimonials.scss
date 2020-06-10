@@ -5,7 +5,7 @@
 
 // Elements
 .Testimonials__heading {
-	margin-bottom: 65px;
+	@include responsive-property(margin-bottom, 35px, 65px);
 }
 
 .Testimonials__items {
