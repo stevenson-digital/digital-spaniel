@@ -53,6 +53,7 @@
 .RecentProjectsFilters__dropdown {
 	border: 0;
 	border-bottom: 2px solid $c-pink;
+	background-color: $c-white;
 	display: none;
 
 	@media (max-width: $mq-recent-projects) {
