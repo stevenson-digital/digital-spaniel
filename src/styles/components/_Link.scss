@@ -17,7 +17,8 @@
 		transition: background-color $t-standard;
 	}
 
-	&:hover {
+	&:hover,
+	&:active {
 		color: $c-grey-mid;
 
 		&:after {
