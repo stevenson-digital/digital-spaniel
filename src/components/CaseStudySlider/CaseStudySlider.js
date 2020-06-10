@@ -77,6 +77,7 @@ export default class CaseStudySlider extends Component {
 			cssEase: 'cubic-bezier(0.77, 0, 0.175, 1)',
 			speed: 700,
 			fade: this.state.isFade,
+			draggable: false,
 			beforeChange: (current, next) => this.handleUpdateCurrentIndex(current, next),
 		}
 
