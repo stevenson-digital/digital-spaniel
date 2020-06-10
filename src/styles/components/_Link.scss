@@ -14,7 +14,8 @@
 		width: 100%;
 		height: 2px;
 		background-color: $c-pink;
-		transition: background-color $t-standard;
+		transform: translate3d(0,0,0);
+		transition: opacity $t-standard, transform 300ms $t-cubic-bez;
 	}
 
 	&:hover,
@@ -22,7 +23,8 @@
 		color: $c-grey-mid;
 
 		&:after {
-			background-color: $c-grey-mid;
+			opacity: 0;
+			transform: translate3d(0,3px,0);
 		}
 	}
 }

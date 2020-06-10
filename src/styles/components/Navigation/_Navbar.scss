@@ -90,7 +90,8 @@
       height: 3px;
       background-color: $c-white;
       opacity: 0;
-      transition: opacity $t-standard;
+      transform: translate3d(0,3px,0);
+		  transition: opacity $t-standard, transform 300ms $t-cubic-bez;
     }
   }
 
@@ -98,6 +99,7 @@
   &:hover {
     a:after {
       opacity: 1;
+      transform: translate3d(0,0,0);
     }
   }
 }
