@@ -78,6 +78,7 @@ export default class CaseStudySlider extends Component {
 			speed: 700,
 			fade: this.state.isFade,
 			draggable: false,
+			touchMove: false,
 			beforeChange: (current, next) => this.handleUpdateCurrentIndex(current, next),
 		}
 

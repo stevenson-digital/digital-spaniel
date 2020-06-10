@@ -73,6 +73,7 @@ export default class RecentProjectsSlider extends Component {
 			adaptiveHeight: true,
 			arrows: false,
 			draggable: false,
+			touchMove: false,
 		}
 
 		return (
