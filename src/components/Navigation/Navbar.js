@@ -15,7 +15,7 @@ const Navbar = () => {
 	// Change logo on load/resize
 	useEffect(() => {
 		const handleSwapLogo = () => {
-			if (window.scrollY < stageOneOffset) {
+			if (window.scrollY <= stageOneOffset) {
 				setLogoSrc(
 					window.innerWidth <= 1024
 						? '/img/digital-spaniel-logo-white.png'
@@ -27,7 +27,7 @@ const Navbar = () => {
 		handleSwapLogo()
 
 		window.addEventListener('resize', handleSwapLogo)
-	})
+	}, [])
 
 	// Shrink the navbar on scroll
 	useScrollPosition(

@@ -1,0 +1,9 @@
+// Block
+.Footer {
+	color: $c-grey-mid;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	background-color: $c-grey-light;
+	@include match-grid-padding(padding-left);
+	@include match-grid-padding(padding-right);
+}

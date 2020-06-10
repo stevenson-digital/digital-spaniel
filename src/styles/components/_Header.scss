@@ -6,6 +6,8 @@
 	min-height: 660px;
 	display: flex;
 	align-items: center;
+	border-bottom: 1px solid $c-grey-mid-3;
+	@include mb-common();
 
 	@media (max-width: $mq-ipad-landscape) {
 		.Heading span,

@@ -66,3 +66,7 @@
 @mixin standard-border-radius() {
   border-radius: 10px;
 }
+
+@mixin mb-common() {
+  @include responsive-property(margin-bottom, 55px, 110px);
+}

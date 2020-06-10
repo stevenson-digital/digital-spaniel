@@ -1,6 +1,6 @@
 // Block
 .Testimonials {
-	margin-bottom: $mb-common;
+	@include mb-common();
 }
 
 // Elements

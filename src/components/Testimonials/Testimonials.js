@@ -36,7 +36,7 @@ const Testimonials = () => {
 				<div className="row">
 					<div className="col-xs-12">
 						<div className="Testimonials__heading">
-							<Heading line1="Kind words" line2="from kanye.rest" />
+							<Heading line1="Kind words" line2="from kanye.rest api" />
 						</div>
 					</div>
 				</div>

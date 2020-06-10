@@ -1,7 +1,7 @@
 // Block
 .RecentProjectsFilters {
 	position: relative;
-	margin-bottom: 65px;
+	@include responsive-property(margin-bottom, 35px, 65px);
 }
 
 // Elements

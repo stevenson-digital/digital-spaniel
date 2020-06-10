@@ -1,8 +1,8 @@
 // Block
 .RecentProjects {
-	margin-bottom: $mb-common;
+	@include mb-common();
 
 	.Heading {
-		margin-bottom: calc(#{$mb-common} / 2);
+		@include responsive-property(margin-bottom, 20px, 55px);
 	}
 }
