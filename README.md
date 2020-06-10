@@ -13,3 +13,5 @@
 - Slick slider is giving console error. Didn't have time to find an alternative slider package.
 - I had to use a class based component for the slick slider in order to use their API methods for changing slide. Couldn't get it to work in a functional component with hooks; kept getting 'slider is undefined'.
 - Responsive has been implemented for resolutions 1920px down to 320px. Given more time and an on-hand designer I would ususally check up to 2560px.
+- No browser testing completed (built on Chrome) due to timeframe. Tested on Google Pixel 3a actual device (still Chrome).
+- Testimonial quotes are pulled from a Kanye West quotes API called kanye.rest via Axios.

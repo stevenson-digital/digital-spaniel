@@ -1,0 +1,52 @@
+// Block
+.Testimonial {
+	background-color: $c-grey-light-2;
+	padding: 65px 115px;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: calc(33.33333333% - (60px / 3));
+	@include standard-border-radius();
+	@include responsive-property(padding-top, 20px, 65px);
+	@include responsive-property(padding-right, 20px, 115px);
+	@include responsive-property(padding-bottom, 20px, 65px);
+	@include responsive-property(padding-left, 20px, 115px);
+}
+
+// Elements
+.Testimonial__quote {
+	position: relative;
+	color: $c-grey;
+	margin-bottom: 40px;
+
+	&:before,
+	&:after {
+		content: '“';
+		position: absolute;
+		font-family: 'ITC Avant Garde Std Md';
+		font-size: 154px;
+		height: 45px;
+		line-height: 163px;
+		color: $c-grey-mid-3;
+		z-index: 0;
+	}
+
+	&:before {
+		top: -25px;
+    left: -85px;
+	}
+
+	&:after {
+		bottom: -20px;
+		right: -85px;
+		transform: rotate(180deg);
+	}
+}
+
+.Testimonial__img {
+	width: 96px;
+	height: 96px;
+	border-radius: 50%;
+	border: 2px solid $c-white;
+}

@@ -75,6 +75,14 @@ a {
 	@include responsive-property(font-size, 24px, 30px);
 }
 
+.f-os-semibold-italic-26-20 {
+	font-family: 'Open Sans', sans-serif;
+	line-height: 1.6;
+	font-weight: 600;
+	font-style: italic;
+	@include responsive-property(font-size, 18px, 21px);
+}
+
 .f-os-semibold-21-18 {
 	font-family: 'Open Sans', sans-serif;
 	line-height: 1.5;

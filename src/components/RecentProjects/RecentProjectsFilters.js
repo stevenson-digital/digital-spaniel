@@ -6,10 +6,9 @@ const RecentProjectsFilters = (props) => {
 	const { filterCallback } = props
 	const [positionModifier, setPositionModifier] = useState('position-0')
 	const [activeFilter, setActiveFilter] = useState(0)
-	const [selectedOption, setSelectedOption] = useState(null)
+	const [selectedOption, setSelectedOption] = useState('')
 
 	const handleFilter = (filter, index) => {
-		console.log(filter)
 		// Set active filter
 		setActiveFilter(index)
 

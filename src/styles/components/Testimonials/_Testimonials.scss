@@ -1,0 +1,16 @@
+// Block
+.Testimonials {
+	margin-bottom: $mb-common;
+}
+
+// Elements
+.Testimonials__heading {
+	margin-bottom: 65px;
+}
+
+.Testimonials__items {
+	width: 100%;
+	display: flex;
+	align-items: stretch;
+	justify-content: space-between;
+}
